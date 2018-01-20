@@ -68,4 +68,7 @@
     <string name="questionNineText">Please enter your full name(the same name you provided in the beginning of the quiz) in Camel case </string>
     <string name="questionNineEditTextHint">Enter name without spacing</string>
 
+    <!-- Submit Answer Button -->
+    <string name="submitAnswersButton"> Submit Answers</string>
+
 </resources>
