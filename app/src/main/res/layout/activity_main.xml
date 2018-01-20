@@ -1,0 +1,836 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Question 1 -->
+            <android.support.v7.widget.CardView
+                style="?android:attr/stackViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:elevation="@dimen/cardview_default_elevation">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/question_one_number"
+                        android:layout_width="24dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/questionOneNumber" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@id/question_one_number"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:paddingTop="8dp"
+                            android:text="@string/questionOneText"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp" />
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/question_one_radio_button_a"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:onClick="onRadioButtonClicked"
+                                android:paddingLeft="16dp"
+                                android:text="@string/questionOneRadioButtonA"
+                                android:textColor="@android:color/darker_gray"
+                                android:textSize="16sp" />
+
+                            <RadioButton
+                                android:id="@+id/question_one_radio_button_b"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:onClick="onRadioButtonClicked"
+                                android:paddingLeft="16dp"
+                                android:text="@string/questionOneRadioButtonB"
+                                android:textColor="@android:color/darker_gray"
+                                android:textSize="16sp" />
+
+                            <RadioButton
+                                android:id="@+id/question_one_radio_button_c"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:onClick="onRadioButtonClicked"
+                                android:paddingLeft="16dp"
+                                android:text="@string/questionOneRadioButtonC"
+                                android:textColor="@android:color/darker_gray"
+                                android:textSize="16sp" />
+
+                            <RadioButton
+                                android:id="@+id/question_one_radio_button_d"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginLeft="8dp"
+                                android:onClick="onRadioButtonClicked"
+                                android:paddingLeft="16dp"
+                                android:text="@string/questionOneRadioButtonD"
+                                android:textColor="@android:color/darker_gray"
+                                android:textSize="16sp" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!-- Question 2 -->
+            <android.support.v7.widget.CardView
+                style="?android:attr/stackViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:elevation="@dimen/cardview_default_elevation">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/question_two_number"
+                        android:layout_width="24dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/questionTwoNumber" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@id/question_two_number"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/question_two_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:paddingTop="8dp"
+                            android:text="@string/questionTwoText"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp" />
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/question_two_radio_button_a"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:onClick="onRadioButtonClicked"
+                                android:paddingLeft="16dp"
+                                android:text="@string/questionTwoRadioButtonA"
+                                android:textColor="@android:color/darker_gray"
+                                android:textSize="16sp" />
+
+                            <RadioButton
+                                android:id="@+id/question_two_radio_button_b"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:onClick="onRadioButtonClicked"
+                                android:paddingLeft="16dp"
+                                android:text="@string/questionTwoRadioButtonB"
+                                android:textColor="@android:color/darker_gray"
+                                android:textSize="16sp" />
+
+                            <RadioButton
+                                android:id="@+id/question_two_radio_button_c"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:onClick="onRadioButtonClicked"
+                                android:paddingLeft="16dp"
+                                android:text="@string/questionTwoRadioButtonC"
+                                android:textColor="@android:color/darker_gray"
+                                android:textSize="16sp" />
+
+                            <RadioButton
+                                android:id="@+id/question_two_radio_button_d"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginLeft="8dp"
+                                android:onClick="onRadioButtonClicked"
+                                android:paddingLeft="16dp"
+                                android:text="@string/questionTwoRadioButtonD"
+                                android:textColor="@android:color/darker_gray"
+                                android:textSize="16sp" />
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!-- Question 3 -->
+            <android.support.v7.widget.CardView
+                style="?android:attr/stackViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:elevation="@dimen/cardview_default_elevation">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/question_three_number"
+                        android:layout_width="24dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/questionThreeNumber" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@id/question_three_number"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/question_three_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:paddingTop="8dp"
+                            android:text="@string/questionThreeText"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp" />
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/question_three_radio_button_true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:onClick="onRadioButtonClicked"
+                                android:paddingLeft="16dp"
+                                android:text="@string/questionThreeRadioButtonTrue"
+                                android:textColor="@android:color/darker_gray"
+                                android:textSize="16sp" />
+
+                            <RadioButton
+                                android:id="@+id/question_three_radio_button_false"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginLeft="8dp"
+                                android:onClick="onRadioButtonClicked"
+                                android:paddingLeft="16dp"
+                                android:text="@string/questionThreeRadioButtonFalse"
+                                android:textColor="@android:color/darker_gray"
+                                android:textSize="16sp" />
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!-- Question 4 -->
+            <android.support.v7.widget.CardView
+                style="?android:attr/stackViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:elevation="@dimen/cardview_default_elevation">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/question_four_number"
+                        android:layout_width="24dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/questionFourNumber" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@id/question_four_number"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/question_four_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:paddingTop="8dp"
+                            android:text="@string/questionFourText"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp" />
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/question_four_radio_button_a"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:onClick="onRadioButtonClicked"
+                                android:paddingLeft="16dp"
+                                android:text="@string/questionFourRadioButtonA"
+                                android:textColor="@android:color/darker_gray"
+                                android:textSize="16sp" />
+
+                            <RadioButton
+                                android:id="@+id/question_four_radio_button_b"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:onClick="onRadioButtonClicked"
+                                android:paddingLeft="16dp"
+                                android:text="@string/questionFourRadioButtonB"
+                                android:textColor="@android:color/darker_gray"
+                                android:textSize="16sp" />
+
+                            <RadioButton
+                                android:id="@+id/question_four_radio_button_c"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:onClick="onRadioButtonClicked"
+                                android:paddingLeft="16dp"
+                                android:text="@string/questionFourRadioButtonC"
+                                android:textColor="@android:color/darker_gray"
+                                android:textSize="16sp" />
+
+                            <RadioButton
+                                android:id="@+id/question_four_radio_button_d"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginLeft="8dp"
+                                android:onClick="onRadioButtonClicked"
+                                android:paddingLeft="16dp"
+                                android:text="@string/questionFourRadioButtonD"
+                                android:textColor="@android:color/darker_gray"
+                                android:textSize="16sp" />
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!-- Question 5 -->
+            <android.support.v7.widget.CardView
+                style="?android:attr/stackViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:elevation="@dimen/cardview_default_elevation">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/question_five_number"
+                        android:layout_width="24dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/questionFiveNumber" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@id/question_five_number"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/question_five_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:paddingTop="8dp"
+                            android:text="@string/questionFiveText"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp" />
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/question_five_radio_button_a"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:onClick="onRadioButtonClicked"
+                                android:paddingLeft="16dp"
+                                android:text="@string/questionFiveRadioButtonA"
+                                android:textColor="@android:color/darker_gray"
+                                android:textSize="16sp" />
+
+                            <RadioButton
+                                android:id="@+id/question_five_radio_button_b"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:onClick="onRadioButtonClicked"
+                                android:paddingLeft="16dp"
+                                android:text="@string/questionFiveRadioButtonB"
+                                android:textColor="@android:color/darker_gray"
+                                android:textSize="16sp" />
+
+                            <RadioButton
+                                android:id="@+id/question_five_radio_button_c"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:onClick="onRadioButtonClicked"
+                                android:paddingLeft="16dp"
+                                android:text="@string/questionFiveRadioButtonC"
+                                android:textColor="@android:color/darker_gray"
+                                android:textSize="16sp" />
+
+                            <RadioButton
+                                android:id="@+id/question_five_radio_button_d"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginLeft="8dp"
+                                android:onClick="onRadioButtonClicked"
+                                android:paddingLeft="16dp"
+                                android:text="@string/questionFiveRadioButtonD"
+                                android:textColor="@android:color/darker_gray"
+                                android:textSize="16sp" />
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!-- Question 6 -->
+            <android.support.v7.widget.CardView
+                style="?android:attr/stackViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:elevation="@dimen/cardview_default_elevation">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/question_six_number"
+                        android:layout_width="24dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/questionSixNumber" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@id/question_six_number"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/question_six_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:paddingTop="8dp"
+                            android:text="@string/questionSixText"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp" />
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/question_six_radio_button_a"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:onClick="onRadioButtonClicked"
+                                android:paddingLeft="16dp"
+                                android:text="@string/questionSixRadioButtonA"
+                                android:textColor="@android:color/darker_gray"
+                                android:textSize="16sp" />
+
+                            <RadioButton
+                                android:id="@+id/question_six_radio_button_b"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:onClick="onRadioButtonClicked"
+                                android:paddingLeft="16dp"
+                                android:text="@string/questionSixRadioButtonB"
+                                android:textColor="@android:color/darker_gray"
+                                android:textSize="16sp" />
+
+                            <RadioButton
+                                android:id="@+id/question_six_radio_button_c"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:onClick="onRadioButtonClicked"
+                                android:paddingLeft="16dp"
+                                android:text="@string/questionSixRadioButtonC"
+                                android:textColor="@android:color/darker_gray"
+                                android:textSize="16sp" />
+
+                            <RadioButton
+                                android:id="@+id/question_six_radio_button_d"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginLeft="8dp"
+                                android:onClick="onRadioButtonClicked"
+                                android:paddingLeft="16dp"
+                                android:text="@string/questionSixRadioButtonD"
+                                android:textColor="@android:color/darker_gray"
+                                android:textSize="16sp" />
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!-- Question 7 -->
+            <android.support.v7.widget.CardView
+                style="?android:attr/stackViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:elevation="@dimen/cardview_default_elevation">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/question_seven_number"
+                        android:layout_width="24dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/questionSevenNumber" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@id/question_seven_number"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/question_seven_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:paddingTop="8dp"
+                            android:text="@string/questionSevenText"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp" />
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/question_seven_radio_button_a"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:onClick="onRadioButtonClicked"
+                                android:paddingLeft="16dp"
+                                android:text="@string/questionSevenRadioButtonA"
+                                android:textColor="@android:color/darker_gray"
+                                android:textSize="16sp" />
+
+                            <RadioButton
+                                android:id="@+id/question_seven_radio_button_b"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:onClick="onRadioButtonClicked"
+                                android:paddingLeft="16dp"
+                                android:text="@string/questionSevenRadioButtonB"
+                                android:textColor="@android:color/darker_gray"
+                                android:textSize="16sp" />
+
+                            <RadioButton
+                                android:id="@+id/question_seven_radio_button_c"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:onClick="onRadioButtonClicked"
+                                android:paddingLeft="16dp"
+                                android:text="@string/questionSevenRadioButtonC"
+                                android:textColor="@android:color/darker_gray"
+                                android:textSize="16sp" />
+
+                            <RadioButton
+                                android:id="@+id/question_seven_radio_button_d"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginLeft="8dp"
+                                android:onClick="onRadioButtonClicked"
+                                android:paddingLeft="16dp"
+                                android:text="@string/questionSevenRadioButtonD"
+                                android:textColor="@android:color/darker_gray"
+                                android:textSize="16sp" />
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!-- Question 8 -->
+            <android.support.v7.widget.CardView
+                style="?android:attr/stackViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:elevation="@dimen/cardview_default_elevation">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/question_eight_number"
+                        android:layout_width="24dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/questionEightNumber" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@id/question_eight_number"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/question_eight_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:paddingTop="8dp"
+                            android:text="@string/questionEightText"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp" />
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/question_eight_radio_button_a"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:onClick="onRadioButtonClicked"
+                                android:paddingLeft="16dp"
+                                android:text="@string/questionEightRadioButtonA"
+                                android:textColor="@android:color/darker_gray"
+                                android:textSize="16sp" />
+
+                            <RadioButton
+                                android:id="@+id/question_eight_radio_button_b"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:onClick="onRadioButtonClicked"
+                                android:paddingLeft="16dp"
+                                android:text="@string/questionEightRadioButtonB"
+                                android:textColor="@android:color/darker_gray"
+                                android:textSize="16sp" />
+
+                            <RadioButton
+                                android:id="@+id/question_eight_radio_button_c"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:onClick="onRadioButtonClicked"
+                                android:paddingLeft="16dp"
+                                android:text="@string/questionEightRadioButtonC"
+                                android:textColor="@android:color/darker_gray"
+                                android:textSize="16sp" />
+
+                            <RadioButton
+                                android:id="@+id/question_eight_radio_button_d"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginLeft="8dp"
+                                android:onClick="onRadioButtonClicked"
+                                android:paddingLeft="16dp"
+                                android:text="@string/questionEightRadioButtonD"
+                                android:textColor="@android:color/darker_gray"
+                                android:textSize="16sp" />
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!-- Question 9 -->
+            <android.support.v7.widget.CardView
+                style="?android:attr/stackViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:elevation="@dimen/cardview_default_elevation">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/question_nine_number"
+                        android:layout_width="24dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/questionNineNumber" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@id/question_nine_number"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/question_nine_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:paddingTop="8dp"
+                            android:text="@string/questionNineText"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:hint="@string/questionNineEditTextHint"
+                            android:paddingTop="8dp"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

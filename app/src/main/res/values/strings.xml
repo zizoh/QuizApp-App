@@ -1,0 +1,71 @@
+<resources>
+    <string name="app_name">Quiz App</string>
+
+    <!--Question 1 -->
+    <string name="questionOneNumber">1</string>
+    <string name="questionOneText">Select the option correctly written in Camel case</string>
+    <string name="questionOneRadioButtonA">NaMeBeThis!</string>
+    <string name="questionOneRadioButtonB">NAmeBEthis!</string>
+    <string name="questionOneRadioButtonC">NAMEBETHIS!</string>
+    <string name="questionOneRadioButtonD">naMeBeThis!</string>
+
+    <!--Question 2 -->
+    <string name="questionTwoNumber">2</string>
+    <string name="questionTwoText">What ViewGroup was used to create the layout shown?</string>
+    <string name="questionTwoRadioButtonA">LinearLayout</string>
+    <string name="questionTwoRadioButtonB">ImageView</string>
+    <string name="questionTwoRadioButtonC">Button</string>
+    <string name="questionTwoRadioButtonD">RelativeLayout</string>
+
+    <!--Question 3 -->
+    <string name="questionThreeNumber">3</string>
+    <string name="questionThreeText">Java is an Object Oriented Programming Language. True or False?</string>
+    <string name="questionThreeRadioButtonTrue">True</string>
+    <string name="questionThreeRadioButtonFalse">False</string>
+
+    <!--Question 4 -->
+    <string name="questionFourNumber">4</string>
+    <string name="questionFourText">The ______ is used to end java statements</string>
+    <string name="questionFourRadioButtonA">Question mark (?)</string>
+    <string name="questionFourRadioButtonB">Comma (,)</string>
+    <string name="questionFourRadioButtonC">Semi colon (;)</string>
+    <string name="questionFourRadioButtonD">Exclamation mark (!)</string>
+
+    <!--Question 5 -->
+    <string name="questionFiveNumber">5</string>
+    <string name="questionFiveText">The correct unit for the android xml attribute textSize is </string>
+    <string name="questionFiveRadioButtonA">sp</string>
+    <string name="questionFiveRadioButtonB">tz</string>
+    <string name="questionFiveRadioButtonC">jz</string>
+    <string name="questionFiveRadioButtonD">sz</string>
+
+    <!--Question 6 -->
+    <string name="questionSixNumber">6</string>
+    <string name="questionSixText">When creating XMLs, after sketching the desired layout, you follow three steps. Select the three steps from the list provided </string>
+    <string name="questionSixRadioButtonA">Copy the views</string>
+    <string name="questionSixRadioButtonB">Position the views</string>
+    <string name="questionSixRadioButtonC">Style the views</string>
+    <string name="questionSixRadioButtonD">Select the views</string>
+
+    <!--Question 7 -->
+    <string name="questionSevenNumber">7</string>
+    <string name="questionSevenText">You place photos to be used in your app into the ______ directory </string>
+    <string name="questionSevenRadioButtonA">Layout</string>
+    <string name="questionSevenRadioButtonB">Styles</string>
+    <string name="questionSevenRadioButtonC">Drawable</string>
+    <string name="questionSevenRadioButtonD">Manifest</string>
+
+    <!--Question 8 -->
+    <string name="questionEightNumber">8</string>
+    <string name="questionEightText">You ______ your app to identify coding errors</string>
+    <string name="questionEightRadioButtonA">Debug</string>
+    <string name="questionEightRadioButtonB">Run</string>
+    <string name="questionEightRadioButtonC">Refactor</string>
+    <string name="questionEightRadioButtonD">Gradle</string>
+
+    <!--Question 9 -->
+    <string name="questionNineNumber">9</string>
+    <string name="questionNineText">Please enter your full name(the same name you provided in the beginning of the quiz) in Camel case </string>
+    <string name="questionNineEditTextHint">Enter name without spacing</string>
+
+</resources>
