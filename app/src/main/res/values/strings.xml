@@ -42,10 +42,10 @@
     <!--Question 6 -->
     <string name="questionSixNumber">6</string>
     <string name="questionSixText">When creating XMLs, after sketching the desired layout, you follow three steps. Select the three steps from the list provided </string>
-    <string name="questionSixRadioButtonA">Copy the views</string>
-    <string name="questionSixRadioButtonB">Position the views</string>
-    <string name="questionSixRadioButtonC">Style the views</string>
-    <string name="questionSixRadioButtonD">Select the views</string>
+    <string name="questionSixCheckBoxA">Copy the views</string>
+    <string name="questionSixCheckBoxB">Position the views</string>
+    <string name="questionSixCheckboxC">Style the views</string>
+    <string name="questionSixCheckBoxD">Select the views</string>
 
     <!--Question 7 -->
     <string name="questionSevenNumber">7</string>
