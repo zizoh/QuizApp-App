@@ -39,7 +39,7 @@
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentTop="true"
                         android:layout_marginLeft="8dp"
-                        android:layout_marginTop="16dp"
+                        android:layout_marginTop="8dp"
                         android:text="@string/questionOneNumber" />
 
                     <LinearLayout
@@ -60,7 +60,8 @@
 
                         <RadioGroup
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
                             <RadioButton
                                 android:id="@+id/question_one_radio_button_a"
@@ -136,7 +137,7 @@
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentTop="true"
                         android:layout_marginLeft="8dp"
-                        android:layout_marginTop="16dp"
+                        android:layout_marginTop="8dp"
                         android:text="@string/questionTwoNumber" />
 
                     <LinearLayout
@@ -158,7 +159,8 @@
 
                         <RadioGroup
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
                             <RadioButton
                                 android:id="@+id/question_two_radio_button_a"
@@ -233,7 +235,7 @@
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentTop="true"
                         android:layout_marginLeft="8dp"
-                        android:layout_marginTop="16dp"
+                        android:layout_marginTop="8dp"
                         android:text="@string/questionThreeNumber" />
 
                     <LinearLayout
@@ -255,7 +257,8 @@
 
                         <RadioGroup
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
                             <RadioButton
                                 android:id="@+id/question_three_radio_button_true"
@@ -308,7 +311,7 @@
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentTop="true"
                         android:layout_marginLeft="8dp"
-                        android:layout_marginTop="16dp"
+                        android:layout_marginTop="8dp"
                         android:text="@string/questionFourNumber" />
 
                     <LinearLayout
@@ -330,7 +333,8 @@
 
                         <RadioGroup
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
                             <RadioButton
                                 android:id="@+id/question_four_radio_button_a"
@@ -405,7 +409,7 @@
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentTop="true"
                         android:layout_marginLeft="8dp"
-                        android:layout_marginTop="16dp"
+                        android:layout_marginTop="8dp"
                         android:text="@string/questionFiveNumber" />
 
                     <LinearLayout
@@ -427,7 +431,8 @@
 
                         <RadioGroup
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
                             <RadioButton
                                 android:id="@+id/question_five_radio_button_a"
@@ -502,7 +507,7 @@
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentTop="true"
                         android:layout_marginLeft="8dp"
-                        android:layout_marginTop="16dp"
+                        android:layout_marginTop="8dp"
                         android:text="@string/questionSixNumber" />
 
                     <LinearLayout
@@ -522,55 +527,46 @@
                             android:textColor="@android:color/black"
                             android:textSize="16sp" />
 
-                        <RadioGroup
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
-
-                            <RadioButton
-                                android:id="@+id/question_six_radio_button_a"
+                        <android.support.v7.widget.AppCompatCheckBox
+                                android:id="@+id/question_six_checkbox_a"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="8dp"
-                                android:onClick="onRadioButtonClicked"
                                 android:paddingLeft="16dp"
                                 android:text="@string/questionSixRadioButtonA"
                                 android:textColor="@android:color/darker_gray"
                                 android:textSize="16sp" />
 
-                            <RadioButton
-                                android:id="@+id/question_six_radio_button_b"
+                        <android.support.v7.widget.AppCompatCheckBox
+                                android:id="@+id/question_six_checkbox_b"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="8dp"
-                                android:onClick="onRadioButtonClicked"
                                 android:paddingLeft="16dp"
                                 android:text="@string/questionSixRadioButtonB"
                                 android:textColor="@android:color/darker_gray"
                                 android:textSize="16sp" />
 
-                            <RadioButton
-                                android:id="@+id/question_six_radio_button_c"
+                        <android.support.v7.widget.AppCompatCheckBox
+                                android:id="@+id/question_six_checkbox_c"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="8dp"
-                                android:onClick="onRadioButtonClicked"
                                 android:paddingLeft="16dp"
                                 android:text="@string/questionSixRadioButtonC"
                                 android:textColor="@android:color/darker_gray"
                                 android:textSize="16sp" />
 
-                            <RadioButton
-                                android:id="@+id/question_six_radio_button_d"
+                        <android.support.v7.widget.AppCompatCheckBox
+                                android:id="@+id/question_six_checkbox_d"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="8dp"
                                 android:layout_marginLeft="8dp"
-                                android:onClick="onRadioButtonClicked"
                                 android:paddingLeft="16dp"
                                 android:text="@string/questionSixRadioButtonD"
                                 android:textColor="@android:color/darker_gray"
                                 android:textSize="16sp" />
-                        </RadioGroup>
 
                     </LinearLayout>
 
@@ -599,7 +595,7 @@
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentTop="true"
                         android:layout_marginLeft="8dp"
-                        android:layout_marginTop="16dp"
+                        android:layout_marginTop="8dp"
                         android:text="@string/questionSevenNumber" />
 
                     <LinearLayout
@@ -621,7 +617,8 @@
 
                         <RadioGroup
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
                             <RadioButton
                                 android:id="@+id/question_seven_radio_button_a"
@@ -696,7 +693,7 @@
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentTop="true"
                         android:layout_marginLeft="8dp"
-                        android:layout_marginTop="16dp"
+                        android:layout_marginTop="8dp"
                         android:text="@string/questionEightNumber" />
 
                     <LinearLayout
@@ -718,7 +715,8 @@
 
                         <RadioGroup
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
                             <RadioButton
                                 android:id="@+id/question_eight_radio_button_a"
@@ -794,7 +792,7 @@
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentTop="true"
                         android:layout_marginLeft="8dp"
-                        android:layout_marginTop="16dp"
+                        android:layout_marginTop="8dp"
                         android:text="@string/questionNineNumber" />
 
                     <LinearLayout
