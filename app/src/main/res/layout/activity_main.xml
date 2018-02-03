@@ -896,7 +896,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_weight="1"
                     android:background="#00BCD4"
-                    android:onClick="submitAnswersButton"
+                    android:onClick="submitAnswers"
                     android:paddingLeft="8dp"
                     android:paddingRight="8dp"
                     android:text="@string/submitAnswersButton" />
@@ -908,7 +908,7 @@
                     android:layout_marginEnd="16dp"
                     android:layout_weight="1"
                     android:background="#00BCD4"
-                    android:onClick="retakeQuizButton"
+                    android:onClick="retakeQuiz"
                     android:paddingLeft="8dp"
                     android:paddingRight="8dp"
                     android:text="@string/retakeQuizButton" />

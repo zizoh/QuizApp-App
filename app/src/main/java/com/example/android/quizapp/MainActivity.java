@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the Submit Answers button is clicked.
      */
 
-    public void submitAnswersButton(View view) {
+    public void submitAnswers(View view) {
 
         int finalMarks = markQuestions();
 
@@ -343,6 +343,85 @@ public class MainActivity extends AppCompatActivity {
             noOfCorrectQuestionsAnswered++;
         }
         return noOfCorrectQuestionsAnswered;
+    }
+
+    // This method is called when the retakeQuiz Button is clicked
+    public void retakeQuiz(View view) {
+        // Question 1
+        RadioButton questionOneRadioButtonA = findViewById(R.id.question_one_radio_button_a);
+        questionOneRadioButtonA.setChecked(false);
+        RadioButton questionOneRadioButtonB = findViewById(R.id.question_one_radio_button_b);
+        questionOneRadioButtonB.setChecked(false);
+        RadioButton questionOneRadioButtonC = findViewById(R.id.question_one_radio_button_c);
+        questionOneRadioButtonC.setChecked(false);
+        RadioButton questionOneRadioButtonD = findViewById(R.id.question_one_radio_button_d);
+        questionOneRadioButtonD.setChecked(false);
+
+        // Question 2
+        RadioButton questionTwoRadioButtonA = findViewById(R.id.question_two_radio_button_a);
+        questionTwoRadioButtonA.setChecked(false);
+        RadioButton questionTwoRadioButtonB = findViewById(R.id.question_two_radio_button_b);
+        questionTwoRadioButtonB.setChecked(false);
+        RadioButton questionTwoRadioButtonC = findViewById(R.id.question_two_radio_button_c);
+        questionTwoRadioButtonC.setChecked(false);
+        RadioButton questionTwoRadioButtonD = findViewById(R.id.question_two_radio_button_d);
+        questionTwoRadioButtonD.setChecked(false);
+
+        // Question 3
+        RadioButton questionThreeRadioButtonTrue = findViewById(R.id.question_three_radio_button_true);
+        questionThreeRadioButtonTrue.setChecked(false);
+        RadioButton questionThreeRadioButtonFalse = findViewById(R.id.question_three_radio_button_false);
+        questionThreeRadioButtonFalse.setChecked(false);
+
+        // Question 4
+        RadioButton questionFourRadioButtonA = findViewById(R.id.question_four_radio_button_a);
+        questionFourRadioButtonA.setChecked(false);
+        RadioButton questionFourRadioButtonB = findViewById(R.id.question_four_radio_button_b);
+        questionFourRadioButtonB.setChecked(false);
+        RadioButton questionFourRadioButtonC = findViewById(R.id.question_four_radio_button_c);
+        questionFourRadioButtonC.setChecked(false);
+        RadioButton questionFourRadioButtonD = findViewById(R.id.question_four_radio_button_d);
+        questionFourRadioButtonD.setChecked(false);
+
+        // Question 5
+        RadioButton questionFiveRadioButtonA = findViewById(R.id.question_five_radio_button_a);
+        questionFiveRadioButtonA.setChecked(false);
+        RadioButton questionFiveRadioButtonB = findViewById(R.id.question_five_radio_button_b);
+        questionFiveRadioButtonB.setChecked(false);
+        RadioButton questionFiveRadioButtonC = findViewById(R.id.question_five_radio_button_c);
+        questionFiveRadioButtonC.setChecked(false);
+        RadioButton questionFiveRadioButtonD = findViewById(R.id.question_five_radio_button_d);
+        questionFiveRadioButtonD.setChecked(false);
+
+        // Question 6
+        CheckBox questionSixCheckboxA = findViewById(R.id.question_six_checkbox_a);
+        questionSixCheckboxA.setChecked(false);
+        CheckBox questionSixCheckboxB = findViewById(R.id.question_six_checkbox_b);
+        questionSixCheckboxB.setChecked(false);
+        CheckBox questionSixCheckboxC = findViewById(R.id.question_six_checkbox_c);
+        questionSixCheckboxC.setChecked(false);
+        CheckBox questionSixCheckboxD = findViewById(R.id.question_six_checkbox_d);
+        questionSixCheckboxD.setChecked(false);
+
+        // Question 7
+        RadioButton questionSevenRadioButtonA = findViewById(R.id.question_seven_radio_button_a);
+        questionSevenRadioButtonA.setChecked(false);
+        RadioButton questionSevenRadioButtonB = findViewById(R.id.question_seven_radio_button_b);
+        questionSevenRadioButtonB.setChecked(false);
+        RadioButton questionSevenRadioButtonC = findViewById(R.id.question_seven_radio_button_c);
+        questionSevenRadioButtonC.setChecked(false);
+        RadioButton questionSevenRadioButtonD = findViewById(R.id.question_seven_radio_button_d);
+        questionSevenRadioButtonD.setChecked(false);
+
+        // Question 8
+        RadioButton questionEightRadioButtonA = findViewById(R.id.question_eight_radio_button_a);
+        questionEightRadioButtonA.setChecked(false);
+        RadioButton questionEightRadioButtonB = findViewById(R.id.question_eight_radio_button_b);
+        questionEightRadioButtonB.setChecked(false);
+        RadioButton questionEightRadioButtonC = findViewById(R.id.question_eight_radio_button_c);
+        questionEightRadioButtonC.setChecked(false);
+        RadioButton questionEightRadioButtonD = findViewById(R.id.question_eight_radio_button_d);
+        questionEightRadioButtonD.setChecked(false);
     }
 }
 
