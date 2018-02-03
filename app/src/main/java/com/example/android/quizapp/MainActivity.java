@@ -159,68 +159,60 @@ public class MainActivity extends AppCompatActivity {
         boolean checked = ((CheckBox) view).isChecked();
 
         // Check which checkbox was clicked
-        switch(view.getId()) {
+        switch (view.getId()) {
             case R.id.question_six_checkbox_a:
-                if (checked && numberOfCheckboxesChecked >= 3){
+                if (checked && numberOfCheckboxesChecked >= 3) {
                     ((CheckBox) view).setChecked(false);
                     Toast.makeText(this, R.string.tooManyOptionsSelectedFloat, Toast.LENGTH_LONG).show();
-                }
-                else {
+                } else {
                     // the checkbox either got unchecked
                     // or there are less than 3 other checkboxes checked
                     if (checked) {
-                        numberOfCheckboxesChecked ++;
-                    }
-                    else {
-                        numberOfCheckboxesChecked --;
+                        numberOfCheckboxesChecked++;
+                    } else {
+                        numberOfCheckboxesChecked--;
                     }
                 }
                 break;
             case R.id.question_six_checkbox_b: // Position the views - 1/3 of correct answer
-                if (checked && numberOfCheckboxesChecked >= 3){
+                if (checked && numberOfCheckboxesChecked >= 3) {
                     ((CheckBox) view).setChecked(false);
                     Toast.makeText(this, R.string.tooManyOptionsSelectedFloat, Toast.LENGTH_LONG).show();
-                }
-                else {
+                } else {
                     // the checkbox either got unchecked
                     // or there are less than 3 other checkboxes checked
                     if (checked) {
-                        numberOfCheckboxesChecked ++;
-                    }
-                    else {
-                        numberOfCheckboxesChecked --;
+                        numberOfCheckboxesChecked++;
+                    } else {
+                        numberOfCheckboxesChecked--;
                     }
                 }
                 break;
             case R.id.question_six_checkbox_c: // Style the views - 1/3 of correct answer
-                if (checked && numberOfCheckboxesChecked >= 3){
+                if (checked && numberOfCheckboxesChecked >= 3) {
                     ((CheckBox) view).setChecked(false);
                     Toast.makeText(this, R.string.tooManyOptionsSelectedFloat, Toast.LENGTH_LONG).show();
-                }
-                else {
+                } else {
                     // the checkbox either got unchecked
                     // or there are less than 3 other checkboxes checked
                     if (checked) {
-                        numberOfCheckboxesChecked ++;
-                    }
-                    else {
-                        numberOfCheckboxesChecked --;
+                        numberOfCheckboxesChecked++;
+                    } else {
+                        numberOfCheckboxesChecked--;
                     }
                 }
                 break;
             case R.id.question_six_checkbox_d: // Select the views - 1/3 of correct answer
-                if (checked && numberOfCheckboxesChecked >= 3){
+                if (checked && numberOfCheckboxesChecked >= 3) {
                     ((CheckBox) view).setChecked(false);
                     Toast.makeText(this, R.string.tooManyOptionsSelectedFloat, Toast.LENGTH_LONG).show();
-                }
-                else {
+                } else {
                     // the checkbox either got unchecked
                     // or there are less than 3 other checkboxes checked
                     if (checked) {
-                        numberOfCheckboxesChecked ++;
-                    }
-                    else {
-                        numberOfCheckboxesChecked --;
+                        numberOfCheckboxesChecked++;
+                    } else {
+                        numberOfCheckboxesChecked--;
                     }
                 }
                 break;
@@ -278,7 +270,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // This method contains the marking scheme and assigns 1 point to every correct answer
-    private int markQuestions(){
+    private int markQuestions() {
 
         // Correct Answers to questions (1, 2, 3, 4, 5, 7, 8)
         int noOfCorrectQuestionsAnswered = 0;
@@ -287,36 +279,36 @@ public class MainActivity extends AppCompatActivity {
         RadioButton questionOneRadioButtonD = findViewById(R.id.question_one_radio_button_d);
         boolean answerQuestionOneRadioButtonD = questionOneRadioButtonD.isChecked();
 
-        if (answerQuestionOneRadioButtonD){
-            noOfCorrectQuestionsAnswered ++;
+        if (answerQuestionOneRadioButtonD) {
+            noOfCorrectQuestionsAnswered++;
         }
         // Question 2 (1 mark)
         RadioButton questionTwoRadioButtonD = findViewById(R.id.question_two_radio_button_d);
         boolean answerQuestionTwoRadioButtonD = questionTwoRadioButtonD.isChecked();
 
-        if (answerQuestionTwoRadioButtonD){
-            noOfCorrectQuestionsAnswered ++;
+        if (answerQuestionTwoRadioButtonD) {
+            noOfCorrectQuestionsAnswered++;
         }
         // Question 3 (1 mark)
         RadioButton questionThreeRadioButtonTrue = findViewById(R.id.question_three_radio_button_true);
         boolean answerQuestionThreeRadioButtonTrue = questionThreeRadioButtonTrue.isChecked();
 
-        if (answerQuestionThreeRadioButtonTrue){
-            noOfCorrectQuestionsAnswered ++;
+        if (answerQuestionThreeRadioButtonTrue) {
+            noOfCorrectQuestionsAnswered++;
         }
         // Question 4 (1 mark)
         RadioButton questionFourRadioButtonC = findViewById(R.id.question_four_radio_button_c);
         boolean answerQuestionFourRadioButtonC = questionFourRadioButtonC.isChecked();
 
-        if (answerQuestionFourRadioButtonC){
-            noOfCorrectQuestionsAnswered ++;
+        if (answerQuestionFourRadioButtonC) {
+            noOfCorrectQuestionsAnswered++;
         }
         // Question 5 (1 mark)
         RadioButton questionFiveRadioButtonA = findViewById(R.id.question_five_radio_button_a);
         boolean answerQuestionFiveRadioButtonA = questionFiveRadioButtonA.isChecked();
 
-        if (answerQuestionFiveRadioButtonA){
-            noOfCorrectQuestionsAnswered ++;
+        if (answerQuestionFiveRadioButtonA) {
+            noOfCorrectQuestionsAnswered++;
         }
         // Question 6 (1 mark)
         // Determines if the user checks B
@@ -333,22 +325,22 @@ public class MainActivity extends AppCompatActivity {
 
         if (answerQuestionSixCheckboxB
                 && answerQuestionSixCheckboxC
-                && answerQuestionSixCheckboxD){
-            noOfCorrectQuestionsAnswered ++;
+                && answerQuestionSixCheckboxD) {
+            noOfCorrectQuestionsAnswered++;
         }
         // Question 7 (1 mark)
         RadioButton questionSevenRadioButtonC = findViewById(R.id.question_seven_radio_button_c);
         boolean answerQuestionSevenRadioButtonC = questionSevenRadioButtonC.isChecked();
 
-        if (answerQuestionSevenRadioButtonC){
-            noOfCorrectQuestionsAnswered ++;
+        if (answerQuestionSevenRadioButtonC) {
+            noOfCorrectQuestionsAnswered++;
         }
         // Question 8 (1 mark)
         RadioButton questionEightRadioButtonA = findViewById(R.id.question_eight_radio_button_a);
         boolean answerQuestionEightRadioButtonA = questionEightRadioButtonA.isChecked();
 
-        if (answerQuestionEightRadioButtonA){
-            noOfCorrectQuestionsAnswered ++;
+        if (answerQuestionEightRadioButtonA) {
+            noOfCorrectQuestionsAnswered++;
         }
         return noOfCorrectQuestionsAnswered;
     }

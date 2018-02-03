@@ -70,6 +70,9 @@
     <string name="questionNineEditTextHint">Enter name without spacing</string>
 
     <!-- Submit Answer Button -->
-    <string name="submitAnswersButton"> Submit Answers</string>
+    <string name="submitAnswersButton">Submit Answers</string>
+
+    <!-- Retake Quiz Button -->
+    <string name="retakeQuizButton">Retake Quiz</string>
 
 </resources>
