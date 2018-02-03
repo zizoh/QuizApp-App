@@ -17,6 +17,40 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <!-- Username -->
+            <android.support.v7.widget.CardView
+                style="?android:attr/stackViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:elevation="@dimen/cardview_default_elevation">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/username_text"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/username_hint"
+                        android:inputType="textPersonName" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
             <!-- Question 1 -->
             <android.support.v7.widget.CardView
                 style="?android:attr/stackViewStyle"
