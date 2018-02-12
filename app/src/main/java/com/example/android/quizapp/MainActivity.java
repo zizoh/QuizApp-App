@@ -5,11 +5,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    int totalNumberOfQuestions = 8;
     int noOfQuestionsAnswered = 0;
     int numberOfCheckboxesChecked = 0;
     int questionOneAnswered = 0;
@@ -35,9 +37,9 @@ public class MainActivity extends AppCompatActivity {
     public void submitAnswers(View view) {
 
         int finalMarks = markQuestions();
+        EditText userName = (EditText) findViewById(R.id.username);
 
-        Toast.makeText(this, "You answered " + noOfQuestionsAnswered, Toast.LENGTH_SHORT).show();
-        Toast.makeText(this, "You answered " + finalMarks + " questions correctly!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Hey " + userName.getText() + ", you scored " + finalMarks + "/" + totalNumberOfQuestions + "!", Toast.LENGTH_LONG).show();
     }
 
     // This method handles the click event for Question 1 RadioButtons
@@ -265,7 +267,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /*// This method handles click events for Question 6 checkboxes
+    // This method handles click events for Question 6 checkboxes
     // It allows the user to check only 3 checkboxes at a time
     // If 3 checkboxes are checked and the user changes his/her mind and wants to select the last unchecked button,
     // he/she has to uncheck one checkbox first
@@ -276,87 +278,131 @@ public class MainActivity extends AppCompatActivity {
         // Check which checkbox was clicked
         switch (view.getId()) {
             case R.id.question_six_checkbox_a:
-                if (checked && numberOfCheckboxesChecked >= 3) {
+                // If the 4th Checkbox is checked when the 3 are already checked
+                if (checked && numberOfCheckboxesChecked == 3) {
                     ((CheckBox) view).setChecked(false);
                     Toast.makeText(this, R.string.tooManyOptionsSelectedFloat, Toast.LENGTH_LONG).show();
+                }
+                // This was the first time one of the Checkboxes is checked
+                else if (checked && numberOfCheckboxesChecked == 0) {
+                    numberOfCheckboxesChecked++;
+                    noOfQuestionsAnswered++;
+                    checkProgressBar(view);
+                    questionSixAnswered++;// Copy the views
+                }
+                // If at least 1 Checkbox is checked
+                else if (checked && numberOfCheckboxesChecked >= 1) {
+                    numberOfCheckboxesChecked++;
                 } else {
-                    // the checkbox either got unchecked
-                    // or there are less than 3 other checkboxes checked
-                    if (checked && questionSixAnswered == 0) {
-                        numberOfCheckboxesChecked++;
-                        noOfQuestionsAnswered++;
-                        checkProgressBar(view);
-                        questionSixAnswered++;// Copy the views
-                        Toast.makeText(this, R.string.tooManyOptionsSelectedFloat, Toast.LENGTH_LONG).show();
-                    } else if (checked) {
-                        numberOfCheckboxesChecked++;
-                        questionSixAnswered++;
-                        Toast.makeText(this, R.string.tooManyOptionsSelectedFloat, Toast.LENGTH_LONG).show();
-                    } else if (numberOfCheckboxesChecked == 1) {
+                    // If only 1 Checkbox was Checked and now unchecked
+                    // the question becomes unanswered
+                    if (numberOfCheckboxesChecked == 1) {
                         numberOfCheckboxesChecked--;
                         noOfQuestionsAnswered--;
-                        questionSixAnswered = 0;
                         checkProgressBar(view);
-                        Toast.makeText(this, R.string.tooManyOptionsSelectedFloat, Toast.LENGTH_LONG).show();
+                        questionSixAnswered--;
+                    }
+                    // If more than 1 Checkboxes were checked and one is now unchecked
+                    else if (numberOfCheckboxesChecked > 1) {
+                        numberOfCheckboxesChecked--;
                     }
                 }
                 break;
             case R.id.question_six_checkbox_b: // Position the views - 1/3 of correct answer
-                if (checked && numberOfCheckboxesChecked >= 3) {
+                // If the 4th Checkbox is checked when the 3 are already checked
+                if (checked && numberOfCheckboxesChecked == 3) {
                     ((CheckBox) view).setChecked(false);
                     Toast.makeText(this, R.string.tooManyOptionsSelectedFloat, Toast.LENGTH_LONG).show();
+                }
+                // This was the first time one of the Checkboxes is checked
+                else if (checked && numberOfCheckboxesChecked == 0) {
+                    numberOfCheckboxesChecked++;
+                    noOfQuestionsAnswered++;
+                    checkProgressBar(view);
+                    questionSixAnswered++;// Copy the views
+                }
+                // If at least 1 Checkbox is checked
+                else if (checked && numberOfCheckboxesChecked >= 1) {
+                    numberOfCheckboxesChecked++;
                 } else {
-                    // the checkbox either got unchecked
-                    // or there are less than 3 other checkboxes checked
-                    if (checked) {  // Position the views
-                        numberOfCheckboxesChecked++;
-                        noOfQuestionsAnswered++;
-                        //checkProgressBar(view);
-                    } else {
+                    // If only 1 Checkbox was Checked and now unchecked
+                    // the question becomes unanswered
+                    if (numberOfCheckboxesChecked == 1) {
                         numberOfCheckboxesChecked--;
                         noOfQuestionsAnswered--;
-                        //checkProgressBar(view);
+                        checkProgressBar(view);
+                        questionSixAnswered--;
+                    }
+                    // If more than 1 Checkboxes were checked and one is now unchecked
+                    else if (numberOfCheckboxesChecked > 1) {
+                        numberOfCheckboxesChecked--;
                     }
                 }
                 break;
             case R.id.question_six_checkbox_c: // Style the views - 1/3 of correct answer
-                if (checked && numberOfCheckboxesChecked >= 3) {
+                // If the 4th Checkbox is checked when the 3 are already checked
+                if (checked && numberOfCheckboxesChecked == 3) {
                     ((CheckBox) view).setChecked(false);
                     Toast.makeText(this, R.string.tooManyOptionsSelectedFloat, Toast.LENGTH_LONG).show();
+                }
+                // This was the first time one of the Checkboxes is checked
+                else if (checked && numberOfCheckboxesChecked == 0) {
+                    numberOfCheckboxesChecked++;
+                    noOfQuestionsAnswered++;
+                    checkProgressBar(view);
+                    questionSixAnswered++;// Copy the views
+                }
+                // If at least 1 Checkbox is checked
+                else if (checked && numberOfCheckboxesChecked >= 1) {
+                    numberOfCheckboxesChecked++;
                 } else {
-                    // the checkbox either got unchecked
-                    // or there are less than 3 other checkboxes checked
-                    if (checked) {  // Style the views
-                        numberOfCheckboxesChecked++;
-                        noOfQuestionsAnswered++;
-                        //checkProgressBar(view);
-                    } else {
+                    // If only 1 Checkbox was Checked and now unchecked
+                    // the question becomes unanswered
+                    if (numberOfCheckboxesChecked == 1) {
                         numberOfCheckboxesChecked--;
                         noOfQuestionsAnswered--;
-                        //checkProgressBar(view);
+                        checkProgressBar(view);
+                        questionSixAnswered--;
+                    }
+                    // If more than 1 Checkboxes were checked and one is now unchecked
+                    else if (numberOfCheckboxesChecked > 1) {
+                        numberOfCheckboxesChecked--;
                     }
                 }
                 break;
             case R.id.question_six_checkbox_d: // Select the views - 1/3 of correct answer
-                if (checked && numberOfCheckboxesChecked >= 3) {
+                // If the 4th Checkbox is checked when the 3 are already checked
+                if (checked && numberOfCheckboxesChecked == 3) {
                     ((CheckBox) view).setChecked(false);
                     Toast.makeText(this, R.string.tooManyOptionsSelectedFloat, Toast.LENGTH_LONG).show();
+                }
+                // This was the first time one of the Checkboxes is checked
+                else if (checked && numberOfCheckboxesChecked == 0) {
+                    numberOfCheckboxesChecked++;
+                    noOfQuestionsAnswered++;
+                    checkProgressBar(view);
+                    questionSixAnswered++;// Copy the views
+                }
+                // If at least 1 Checkbox is checked
+                else if (checked && numberOfCheckboxesChecked >= 1) {
+                    numberOfCheckboxesChecked++;
                 } else {
-                    // the checkbox either got unchecked
-                    // or there are less than 3 other checkboxes checked
-                    if (checked) {  // Select the views
-                        numberOfCheckboxesChecked++;
-                        noOfQuestionsAnswered++;
-                        //checkProgressBar(view);
-                    } else {
+                    // If only 1 Checkbox was Checked and now unchecked
+                    // the question becomes unanswered
+                    if (numberOfCheckboxesChecked == 1) {
                         numberOfCheckboxesChecked--;
                         noOfQuestionsAnswered--;
-                        //checkProgressBar(view);
+                        checkProgressBar(view);
+                        questionSixAnswered--;
+                    }
+                    // If more than 1 Checkboxes were checked and one is now unchecked
+                    else if (numberOfCheckboxesChecked > 1) {
+                        numberOfCheckboxesChecked--;
                     }
                 }
                 break;
         }
-    }*/
+    }
 
     // This method handles the click event for Question 7 RadioButtons
     public void onQuestionSevenRadioButtonClicked(View view) {
@@ -627,7 +673,7 @@ public class MainActivity extends AppCompatActivity {
     public void checkProgressBar(View view) {
         ProgressBar progressBar = (ProgressBar) findViewById(R.id.progressBar);
         progressBar.setIndeterminate(false);
-        progressBar.setMax(9);
+        progressBar.setMax(totalNumberOfQuestions);
         progressBar.setProgress(noOfQuestionsAnswered, true);
     }
 }
