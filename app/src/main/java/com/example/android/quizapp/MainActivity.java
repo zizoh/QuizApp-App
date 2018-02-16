@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     int totalNumberOfQuestions = 8;
+    int totalMarks = 10;
     int noOfQuestionsAnswered = 0;
     int numberOfCheckboxesChecked = 0;
     int questionOneAnswered = 0;
@@ -39,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         int finalMarks = markQuestions();
         EditText userName = (EditText) findViewById(R.id.username);
 
-        Toast.makeText(this, "Hey " + userName.getText() + ", you scored " + finalMarks + "/" + totalNumberOfQuestions + "!", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Hey " + userName.getText() + ", you scored " + finalMarks + "/" + totalMarks + "!", Toast.LENGTH_LONG).show();
     }
 
     // This method handles the click event for Question 1 RadioButtons
@@ -48,40 +49,40 @@ public class MainActivity extends AppCompatActivity {
         boolean checkedQuestionOne = ((RadioButton) view).isChecked();
         // Check which radio button was clicked
         switch (view.getId()) {
-            case R.id.question_one_radio_button_a:
+            case R.id.question_one_radio_button_a:  // NaMeBeThis
                 if (checkedQuestionOne && questionOneAnswered == 1) {
                 } else {
-                    if (checkedQuestionOne) {    // NaMeBeThis
+                    if (checkedQuestionOne) {
                         noOfQuestionsAnswered++;
                         checkProgressBar(view);
                         questionOneAnswered = 1;
                     }
                 }
                     break;
-            case R.id.question_one_radio_button_b:
+            case R.id.question_one_radio_button_b: // NAmeBEthis
                 if (checkedQuestionOne && questionOneAnswered == 1) {
                 } else {
-                    if (checkedQuestionOne) {    // NAmeBEthis
+                    if (checkedQuestionOne) {
                         noOfQuestionsAnswered++;
                         checkProgressBar(view);
                         questionOneAnswered = 1;
                     }
                 }
                     break;
-            case R.id.question_one_radio_button_c:
+            case R.id.question_one_radio_button_c: // NAMEBETHIS
                 if (checkedQuestionOne && questionOneAnswered == 1) {
                 } else {
-                    if (checkedQuestionOne) {    // NAMEBETHIS
+                    if (checkedQuestionOne) {
                         noOfQuestionsAnswered++;
                         checkProgressBar(view);
                         questionOneAnswered = 1;
                     }
                 }
                     break;
-            case R.id.question_one_radio_button_d:
+            case R.id.question_one_radio_button_d: // naMeBeThis
                 if (checkedQuestionOne && questionOneAnswered == 1) {
                 } else {
-                    if (checkedQuestionOne) {    // naMeBeThis
+                    if (checkedQuestionOne) {
                         noOfQuestionsAnswered++;
                         checkProgressBar(view);
                         questionOneAnswered = 1;
@@ -97,40 +98,40 @@ public class MainActivity extends AppCompatActivity {
         boolean checkedQuestionTwo = ((RadioButton) view).isChecked();
         // Check which radio button was clicked
         switch (view.getId()) {
-            case R.id.question_two_radio_button_a:
+            case R.id.question_two_radio_button_a: // LinearLayout
                 if (checkedQuestionTwo && questionTwoAnswered == 1) {
                 } else {
-                    if (checkedQuestionTwo) {    // LinearLayout
+                    if (checkedQuestionTwo) {
                         noOfQuestionsAnswered++;
                         checkProgressBar(view);
                         questionTwoAnswered = 1;
                     }
                 }
                     break;
-            case R.id.question_two_radio_button_b:
+            case R.id.question_two_radio_button_b: // ImageView
                 if (checkedQuestionTwo && questionTwoAnswered == 1) {
                 } else {
-                    if (checkedQuestionTwo) {    // ImageView
+                    if (checkedQuestionTwo) {
                         noOfQuestionsAnswered++;
                         checkProgressBar(view);
                         questionTwoAnswered = 1;
                     }
                 }
                     break;
-            case R.id.question_two_radio_button_c:
+            case R.id.question_two_radio_button_c: // Button
                 if (checkedQuestionTwo && questionTwoAnswered == 1) {
                 } else {
-                    if (checkedQuestionTwo) {    // Button
+                    if (checkedQuestionTwo) {
                         noOfQuestionsAnswered++;
                         checkProgressBar(view);
                         questionTwoAnswered = 1;
                     }
                 }
                     break;
-            case R.id.question_two_radio_button_d:
+            case R.id.question_two_radio_button_d: // RelativeLayout
                 if (checkedQuestionTwo && questionTwoAnswered == 1) {
                 } else {
-                    if (checkedQuestionTwo) {    // RelativeLayout
+                    if (checkedQuestionTwo) {
                         noOfQuestionsAnswered++;
                         checkProgressBar(view);
                         questionTwoAnswered = 1;
@@ -146,20 +147,20 @@ public class MainActivity extends AppCompatActivity {
         boolean checkedQuestionThree = ((RadioButton) view).isChecked();
         // Check which radio button was clicked
         switch (view.getId()) {
-            case R.id.question_three_radio_button_true:
+            case R.id.question_three_radio_button_true: // True
                 if (checkedQuestionThree && questionThreeAnswered == 1) {
                 } else {
-                    if (checkedQuestionThree) {  // True
+                    if (checkedQuestionThree) {
                         noOfQuestionsAnswered++;
                         checkProgressBar(view);
                         questionThreeAnswered = 1;
                     }
                 }
                     break;
-            case R.id.question_three_radio_button_false:
+            case R.id.question_three_radio_button_false: // False
                 if (checkedQuestionThree && questionThreeAnswered == 1) {
                 } else {
-                    if (checkedQuestionThree) {  // False
+                    if (checkedQuestionThree) {
                         noOfQuestionsAnswered++;
                         checkProgressBar(view);
                         questionThreeAnswered = 1;
@@ -175,40 +176,40 @@ public class MainActivity extends AppCompatActivity {
         boolean checkedQuestionFour = ((RadioButton) view).isChecked();
         // Check which radio button was clicked
         switch (view.getId()) {
-            case R.id.question_four_radio_button_a:
+            case R.id.question_four_radio_button_a: // Question mark (?)
                 if (checkedQuestionFour && questionFourAnswered == 1) {
                 } else {
-                    if (checkedQuestionFour) {   // Question mark (?)
+                    if (checkedQuestionFour) {
                         noOfQuestionsAnswered++;
                         checkProgressBar(view);
                         questionFourAnswered = 1;
                     }
                 }
                     break;
-            case R.id.question_four_radio_button_b:
+            case R.id.question_four_radio_button_b: // Comma (,)
                 if (checkedQuestionFour && questionFourAnswered == 1) {
                 } else {
-                    if (checkedQuestionFour) {   // Comma (,)
+                    if (checkedQuestionFour) {
                         noOfQuestionsAnswered++;
                         checkProgressBar(view);
                         questionFourAnswered = 1;
                     }
                 }
                     break;
-            case R.id.question_four_radio_button_c:
+            case R.id.question_four_radio_button_c: // Semi colon (;)
                 if (checkedQuestionFour && questionFourAnswered == 1) {
                 } else {
-                    if (checkedQuestionFour) {   // Semi colon (;)
+                    if (checkedQuestionFour) {
                         noOfQuestionsAnswered++;
                         checkProgressBar(view);
                         questionFourAnswered = 1;
                     }
                 }
                     break;
-            case R.id.question_four_radio_button_d:
+            case R.id.question_four_radio_button_d: // Exclamation mark (!)
                 if (checkedQuestionFour && questionFourAnswered == 1) {
                 } else {
-                    if (checkedQuestionFour) {   // Exclamation mark (!)
+                    if (checkedQuestionFour) {
                         noOfQuestionsAnswered++;
                         checkProgressBar(view);
                         questionFourAnswered = 1;
@@ -224,40 +225,40 @@ public class MainActivity extends AppCompatActivity {
         boolean checkedQuestionFive = ((RadioButton) view).isChecked();
         // Check which radio button was clicked
         switch (view.getId()) {
-            case R.id.question_five_radio_button_a:
+            case R.id.question_five_radio_button_a: // sp
                 if (checkedQuestionFive && questionFiveAnswered == 1) {
                 } else {
-                    if (checkedQuestionFive) {   // sp
+                    if (checkedQuestionFive) {
                         noOfQuestionsAnswered++;
                         checkProgressBar(view);
                         questionFiveAnswered = 1;
                     }
                 }
                     break;
-            case R.id.question_five_radio_button_b:
+            case R.id.question_five_radio_button_b: // tz
                 if (checkedQuestionFive && questionFiveAnswered == 1) {
                 } else {
-                    if (checkedQuestionFive) {   // tz
+                    if (checkedQuestionFive) {
                         noOfQuestionsAnswered++;
                         checkProgressBar(view);
                         questionFiveAnswered = 1;
                     }
                 }
                     break;
-            case R.id.question_five_radio_button_c:
+            case R.id.question_five_radio_button_c: // jz
                 if (checkedQuestionFive && questionFiveAnswered == 1) {
                 } else {
-                    if (checkedQuestionFive) {   // jz
+                    if (checkedQuestionFive) {
                         noOfQuestionsAnswered++;
                         checkProgressBar(view);
                         questionFiveAnswered = 1;
                     }
                 }
                     break;
-            case R.id.question_five_radio_button_d:
+            case R.id.question_five_radio_button_d: // sz
                 if (checkedQuestionFive && questionFiveAnswered == 1) {
                 } else {
-                    if (checkedQuestionFive) {   // sz
+                    if (checkedQuestionFive) {
                         noOfQuestionsAnswered++;
                         checkProgressBar(view);
                         questionFiveAnswered = 1;
@@ -269,32 +270,30 @@ public class MainActivity extends AppCompatActivity {
 
     // This method handles click events for Question 6 checkboxes
     // It allows the user to check only 3 checkboxes at a time
-    // If 3 checkboxes are checked and the user changes his/her mind and wants to select the last unchecked button,
-    // he/she has to uncheck one checkbox first
     public void onQuestionSixCheckboxClicked(View view) {
         // Is the view now checked?
-        boolean checked = ((CheckBox) view).isChecked();
+        boolean checkedQuestionSix = ((CheckBox) view).isChecked();
 
         // Check which checkbox was clicked
         switch (view.getId()) {
-            case R.id.question_six_checkbox_a:
-                // If the 4th Checkbox is checked when the 3 are already checked
-                if (checked && numberOfCheckboxesChecked == 3) {
+            case R.id.question_six_checkbox_a: // Copy the views
+                // If the 4th checkbox is checked when 3 checkboxes are already checked
+                if (checkedQuestionSix && numberOfCheckboxesChecked == 3) {
                     ((CheckBox) view).setChecked(false);
                     Toast.makeText(this, R.string.tooManyOptionsSelectedFloat, Toast.LENGTH_LONG).show();
                 }
-                // This was the first time one of the Checkboxes is checked
-                else if (checked && numberOfCheckboxesChecked == 0) {
+                // If the first time a checkbox is checked
+                else if (checkedQuestionSix && numberOfCheckboxesChecked == 0) {
                     numberOfCheckboxesChecked++;
                     noOfQuestionsAnswered++;
                     checkProgressBar(view);
-                    questionSixAnswered++;// Copy the views
+                    questionSixAnswered++;
                 }
-                // If at least 1 Checkbox is checked
-                else if (checked && numberOfCheckboxesChecked >= 1) {
+                // If at least 1 checkbox is checked
+                else if (checkedQuestionSix && numberOfCheckboxesChecked >= 1) {
                     numberOfCheckboxesChecked++;
                 } else {
-                    // If only 1 Checkbox was Checked and now unchecked
+                    // If only 1 checkbox was checked and now unchecked
                     // the question becomes unanswered
                     if (numberOfCheckboxesChecked == 1) {
                         numberOfCheckboxesChecked--;
@@ -302,30 +301,30 @@ public class MainActivity extends AppCompatActivity {
                         checkProgressBar(view);
                         questionSixAnswered--;
                     }
-                    // If more than 1 Checkboxes were checked and one is now unchecked
+                    // If more than 1 checkboxes were checked and 1 is now unchecked
                     else if (numberOfCheckboxesChecked > 1) {
                         numberOfCheckboxesChecked--;
                     }
                 }
                 break;
-            case R.id.question_six_checkbox_b: // Position the views - 1/3 of correct answer
-                // If the 4th Checkbox is checked when the 3 are already checked
-                if (checked && numberOfCheckboxesChecked == 3) {
+            case R.id.question_six_checkbox_b: // Position the views
+                // If the 4th checkbox is checked when 3 checkboxes are already checked
+                if (checkedQuestionSix && numberOfCheckboxesChecked == 3) {
                     ((CheckBox) view).setChecked(false);
                     Toast.makeText(this, R.string.tooManyOptionsSelectedFloat, Toast.LENGTH_LONG).show();
                 }
-                // This was the first time one of the Checkboxes is checked
-                else if (checked && numberOfCheckboxesChecked == 0) {
+                // If the first time a checkbox is checked
+                else if (checkedQuestionSix && numberOfCheckboxesChecked == 0) {
                     numberOfCheckboxesChecked++;
                     noOfQuestionsAnswered++;
                     checkProgressBar(view);
-                    questionSixAnswered++;// Copy the views
+                    questionSixAnswered++;
                 }
-                // If at least 1 Checkbox is checked
-                else if (checked && numberOfCheckboxesChecked >= 1) {
+                // If at least 1 checkbox is checked
+                else if (checkedQuestionSix && numberOfCheckboxesChecked >= 1) {
                     numberOfCheckboxesChecked++;
                 } else {
-                    // If only 1 Checkbox was Checked and now unchecked
+                    // If only 1 checkbox was checked and now unchecked
                     // the question becomes unanswered
                     if (numberOfCheckboxesChecked == 1) {
                         numberOfCheckboxesChecked--;
@@ -333,30 +332,30 @@ public class MainActivity extends AppCompatActivity {
                         checkProgressBar(view);
                         questionSixAnswered--;
                     }
-                    // If more than 1 Checkboxes were checked and one is now unchecked
+                    // If more than 1 checkboxes were checked and one is now unchecked
                     else if (numberOfCheckboxesChecked > 1) {
                         numberOfCheckboxesChecked--;
                     }
                 }
                 break;
-            case R.id.question_six_checkbox_c: // Style the views - 1/3 of correct answer
-                // If the 4th Checkbox is checked when the 3 are already checked
-                if (checked && numberOfCheckboxesChecked == 3) {
+            case R.id.question_six_checkbox_c: // Style the views
+                // If the 4th checkbox is checked when 3 checkboxes are already checked
+                if (checkedQuestionSix && numberOfCheckboxesChecked == 3) {
                     ((CheckBox) view).setChecked(false);
                     Toast.makeText(this, R.string.tooManyOptionsSelectedFloat, Toast.LENGTH_LONG).show();
                 }
-                // This was the first time one of the Checkboxes is checked
-                else if (checked && numberOfCheckboxesChecked == 0) {
+                // If the first time a checkbox is checked
+                else if (checkedQuestionSix && numberOfCheckboxesChecked == 0) {
                     numberOfCheckboxesChecked++;
                     noOfQuestionsAnswered++;
                     checkProgressBar(view);
-                    questionSixAnswered++;// Copy the views
+                    questionSixAnswered++;
                 }
-                // If at least 1 Checkbox is checked
-                else if (checked && numberOfCheckboxesChecked >= 1) {
+                // If at least 1 checkbox is checked
+                else if (checkedQuestionSix && numberOfCheckboxesChecked >= 1) {
                     numberOfCheckboxesChecked++;
                 } else {
-                    // If only 1 Checkbox was Checked and now unchecked
+                    // If only 1 checkbox was checked and now unchecked
                     // the question becomes unanswered
                     if (numberOfCheckboxesChecked == 1) {
                         numberOfCheckboxesChecked--;
@@ -364,30 +363,30 @@ public class MainActivity extends AppCompatActivity {
                         checkProgressBar(view);
                         questionSixAnswered--;
                     }
-                    // If more than 1 Checkboxes were checked and one is now unchecked
+                    // If more than 1 checkboxes were checked and one is now unchecked
                     else if (numberOfCheckboxesChecked > 1) {
                         numberOfCheckboxesChecked--;
                     }
                 }
                 break;
-            case R.id.question_six_checkbox_d: // Select the views - 1/3 of correct answer
-                // If the 4th Checkbox is checked when the 3 are already checked
-                if (checked && numberOfCheckboxesChecked == 3) {
+            case R.id.question_six_checkbox_d: // Select the views
+                // If the 4th checkbox is checked when 3 checkboxes are already checked
+                if (checkedQuestionSix && numberOfCheckboxesChecked == 3) {
                     ((CheckBox) view).setChecked(false);
                     Toast.makeText(this, R.string.tooManyOptionsSelectedFloat, Toast.LENGTH_LONG).show();
                 }
-                // This was the first time one of the Checkboxes is checked
-                else if (checked && numberOfCheckboxesChecked == 0) {
+                // If the first time a checkbox is checked
+                else if (checkedQuestionSix && numberOfCheckboxesChecked == 0) {
                     numberOfCheckboxesChecked++;
                     noOfQuestionsAnswered++;
                     checkProgressBar(view);
-                    questionSixAnswered++;// Copy the views
+                    questionSixAnswered++;
                 }
-                // If at least 1 Checkbox is checked
-                else if (checked && numberOfCheckboxesChecked >= 1) {
+                // If at least 1 checkbox is checked
+                else if (checkedQuestionSix && numberOfCheckboxesChecked >= 1) {
                     numberOfCheckboxesChecked++;
                 } else {
-                    // If only 1 Checkbox was Checked and now unchecked
+                    // If only 1 checkbox was checked and now unchecked
                     // the question becomes unanswered
                     if (numberOfCheckboxesChecked == 1) {
                         numberOfCheckboxesChecked--;
@@ -395,7 +394,7 @@ public class MainActivity extends AppCompatActivity {
                         checkProgressBar(view);
                         questionSixAnswered--;
                     }
-                    // If more than 1 Checkboxes were checked and one is now unchecked
+                    // If more than 1 checkboxes were checked and one is now unchecked
                     else if (numberOfCheckboxesChecked > 1) {
                         numberOfCheckboxesChecked--;
                     }
@@ -508,35 +507,35 @@ public class MainActivity extends AppCompatActivity {
         // Correct Answers to all questions
         int noOfCorrectQuestionsAnswered = 0;
 
-        // Question 1 correct answer Button D (1 mark)
+        // Question 1 correct answer D (1 mark)
         RadioButton questionOneRadioButtonD = findViewById(R.id.question_one_radio_button_d);
         boolean answerQuestionOneRadioButtonD = questionOneRadioButtonD.isChecked();
 
         if (answerQuestionOneRadioButtonD) {
             noOfCorrectQuestionsAnswered++;
         }
-        // Question 2 correct answer Button D (1 mark)
+        // Question 2 correct answer D (1 mark)
         RadioButton questionTwoRadioButtonD = findViewById(R.id.question_two_radio_button_d);
         boolean answerQuestionTwoRadioButtonD = questionTwoRadioButtonD.isChecked();
 
         if (answerQuestionTwoRadioButtonD) {
             noOfCorrectQuestionsAnswered++;
         }
-        // Question 3 correct answer Button True (1 mark)
+        // Question 3 correct answer True (1 mark)
         RadioButton questionThreeRadioButtonTrue = findViewById(R.id.question_three_radio_button_true);
         boolean answerQuestionThreeRadioButtonTrue = questionThreeRadioButtonTrue.isChecked();
 
         if (answerQuestionThreeRadioButtonTrue) {
             noOfCorrectQuestionsAnswered++;
         }
-        // Question 4 correct answer Button C (1 mark)
+        // Question 4 correct answer C (1 mark)
         RadioButton questionFourRadioButtonC = findViewById(R.id.question_four_radio_button_c);
         boolean answerQuestionFourRadioButtonC = questionFourRadioButtonC.isChecked();
 
         if (answerQuestionFourRadioButtonC) {
             noOfCorrectQuestionsAnswered++;
         }
-        // Question 5 correct answer Button A (1 mark)
+        // Question 5 correct answer A (1 mark)
         RadioButton questionFiveRadioButtonA = findViewById(R.id.question_five_radio_button_a);
         boolean answerQuestionFiveRadioButtonA = questionFiveRadioButtonA.isChecked();
 
@@ -544,31 +543,33 @@ public class MainActivity extends AppCompatActivity {
             noOfCorrectQuestionsAnswered++;
         }
         // Question 6 correct answer Checkboxes B, C and D (1 mark)
-        // Determines if the user checks B
         CheckBox questionSixCheckboxB = findViewById(R.id.question_six_checkbox_b);
         boolean answerQuestionSixCheckboxB = questionSixCheckboxB.isChecked();
 
-        // Determines if the user checks C
         CheckBox questionSixCheckboxC = findViewById(R.id.question_six_checkbox_c);
         boolean answerQuestionSixCheckboxC = questionSixCheckboxC.isChecked();
 
-        // Determines if the user checks D
         CheckBox questionSixCheckboxD = findViewById(R.id.question_six_checkbox_d);
         boolean answerQuestionSixCheckboxD = questionSixCheckboxD.isChecked();
 
-        if (answerQuestionSixCheckboxB
-                && answerQuestionSixCheckboxC
-                && answerQuestionSixCheckboxD) {
+        if (answerQuestionSixCheckboxB) { // Determines if the user checks B
             noOfCorrectQuestionsAnswered++;
         }
-        // Question 7 correct answer Button C (1 mark)
+        if (answerQuestionSixCheckboxC) { // Determines if the user checks C
+            noOfCorrectQuestionsAnswered++;
+        }
+        if (answerQuestionSixCheckboxD) { // Determines if the user checks D
+            noOfCorrectQuestionsAnswered++;
+        }
+
+        // Question 7 correct answer C (1 mark)
         RadioButton questionSevenRadioButtonC = findViewById(R.id.question_seven_radio_button_c);
         boolean answerQuestionSevenRadioButtonC = questionSevenRadioButtonC.isChecked();
 
         if (answerQuestionSevenRadioButtonC) {
             noOfCorrectQuestionsAnswered++;
         }
-        // Question 8 correct answer Button A (1 mark)
+        // Question 8 correct answer A (1 mark)
         RadioButton questionEightRadioButtonA = findViewById(R.id.question_eight_radio_button_a);
         boolean answerQuestionEightRadioButtonA = questionEightRadioButtonA.isChecked();
 
@@ -579,8 +580,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // This method is called when the retakeQuiz Button is clicked
-    public void retakeQuiz(View view) {
-
+    public void tryAgain(View view) {
         // Question 1
         RadioButton questionOneRadioButtonA = findViewById(R.id.question_one_radio_button_a);
         questionOneRadioButtonA.setChecked(false);

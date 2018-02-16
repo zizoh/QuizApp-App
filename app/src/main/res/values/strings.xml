@@ -2,7 +2,7 @@
     <string name="app_name">Quiz App</string>
 
     <!-- Username -->
-    <string name="username_text">Please enter your first name</string>
+    <string name="username_text">Please enter your name</string>
     <string name="username_hint">John</string>
 
     <!--Question 1 -->
@@ -77,6 +77,6 @@
     <string name="submitAnswersButton">Submit Answers</string>
 
     <!-- Retake Quiz Button -->
-    <string name="retakeQuizButton">Retake Quiz</string>
+    <string name="tryAgainButton">Try Again</string>
 
 </resources>

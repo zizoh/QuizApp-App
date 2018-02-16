@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
 
     <include
         android:id="@+id/toolbar"
@@ -16,7 +19,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:max="9" />
+        android:background="@android:color/white" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -46,18 +49,21 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/username_prompt_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/username_text"
-                        android:textColor="@android:color/black"
-                        android:textSize="16sp" />
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18sp" />
 
                     <EditText
                         android:id="@+id/username"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/username_hint"
-                        android:inputType="textPersonName" />
+                        android:inputType="textPersonName"
+                        android:nextFocusLeft="@id/username"
+                        android:nextFocusUp="@id/username" />
 
                 </LinearLayout>
 
@@ -97,13 +103,14 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/question_one_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="8dp"
-                            android:paddingTop="8dp"
+                            android:padding="8dp"
                             android:text="@string/questionOneText"
-                            android:textColor="@android:color/black"
-                            android:textSize="16sp" />
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp" />
 
                         <RadioGroup
                             android:layout_width="wrap_content"
@@ -119,7 +126,7 @@
                                 android:paddingEnd="16dp"
                                 android:paddingStart="16dp"
                                 android:text="@string/questionOneRadioButtonA"
-                                android:textColor="@android:color/darker_gray"
+                                android:textColor="@color/radioButtonColor"
                                 android:textSize="16sp" />
 
                             <RadioButton
@@ -131,7 +138,7 @@
                                 android:paddingEnd="16dp"
                                 android:paddingStart="16dp"
                                 android:text="@string/questionOneRadioButtonB"
-                                android:textColor="@android:color/darker_gray"
+                                android:textColor="@color/radioButtonColor"
                                 android:textSize="16sp" />
 
                             <RadioButton
@@ -143,7 +150,7 @@
                                 android:paddingEnd="16dp"
                                 android:paddingStart="16dp"
                                 android:text="@string/questionOneRadioButtonC"
-                                android:textColor="@android:color/darker_gray"
+                                android:textColor="@color/radioButtonColor"
                                 android:textSize="16sp" />
 
                             <RadioButton
@@ -156,7 +163,7 @@
                                 android:paddingEnd="16dp"
                                 android:paddingStart="16dp"
                                 android:text="@string/questionOneRadioButtonD"
-                                android:textColor="@android:color/darker_gray"
+                                android:textColor="@color/radioButtonColor"
                                 android:textSize="16sp" />
 
                         </RadioGroup>
@@ -205,10 +212,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="8dp"
-                            android:paddingTop="8dp"
+                            android:padding="8dp"
                             android:text="@string/questionTwoText"
-                            android:textColor="@android:color/black"
-                            android:textSize="16sp" />
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp" />
 
                         <RadioGroup
                             android:layout_width="wrap_content"
@@ -224,7 +231,7 @@
                                 android:paddingEnd="16dp"
                                 android:paddingStart="16dp"
                                 android:text="@string/questionTwoRadioButtonA"
-                                android:textColor="@android:color/darker_gray"
+                                android:textColor="@color/radioButtonColor"
                                 android:textSize="16sp" />
 
                             <RadioButton
@@ -236,7 +243,7 @@
                                 android:paddingEnd="16dp"
                                 android:paddingStart="16dp"
                                 android:text="@string/questionTwoRadioButtonB"
-                                android:textColor="@android:color/darker_gray"
+                                android:textColor="@color/radioButtonColor"
                                 android:textSize="16sp" />
 
                             <RadioButton
@@ -248,7 +255,7 @@
                                 android:paddingEnd="16dp"
                                 android:paddingStart="16dp"
                                 android:text="@string/questionTwoRadioButtonC"
-                                android:textColor="@android:color/darker_gray"
+                                android:textColor="@color/radioButtonColor"
                                 android:textSize="16sp" />
 
                             <RadioButton
@@ -261,7 +268,7 @@
                                 android:paddingEnd="16dp"
                                 android:paddingStart="16dp"
                                 android:text="@string/questionTwoRadioButtonD"
-                                android:textColor="@android:color/darker_gray"
+                                android:textColor="@color/radioButtonColor"
                                 android:textSize="16sp" />
                         </RadioGroup>
 
@@ -309,10 +316,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="8dp"
-                            android:paddingTop="8dp"
+                            android:padding="8dp"
                             android:text="@string/questionThreeText"
-                            android:textColor="@android:color/black"
-                            android:textSize="16sp" />
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp" />
 
                         <RadioGroup
                             android:layout_width="wrap_content"
@@ -328,7 +335,7 @@
                                 android:paddingEnd="16dp"
                                 android:paddingStart="16dp"
                                 android:text="@string/questionThreeRadioButtonTrue"
-                                android:textColor="@android:color/darker_gray"
+                                android:textColor="@color/radioButtonColor"
                                 android:textSize="16sp" />
 
                             <RadioButton
@@ -341,7 +348,7 @@
                                 android:paddingEnd="16dp"
                                 android:paddingStart="16dp"
                                 android:text="@string/questionThreeRadioButtonFalse"
-                                android:textColor="@android:color/darker_gray"
+                                android:textColor="@color/radioButtonColor"
                                 android:textSize="16sp" />
                         </RadioGroup>
 
@@ -389,10 +396,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="8dp"
-                            android:paddingTop="8dp"
+                            android:padding="8dp"
                             android:text="@string/questionFourText"
-                            android:textColor="@android:color/black"
-                            android:textSize="16sp" />
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp" />
 
                         <RadioGroup
                             android:layout_width="wrap_content"
@@ -408,7 +415,7 @@
                                 android:paddingEnd="16dp"
                                 android:paddingStart="16dp"
                                 android:text="@string/questionFourRadioButtonA"
-                                android:textColor="@android:color/darker_gray"
+                                android:textColor="@color/radioButtonColor"
                                 android:textSize="16sp" />
 
                             <RadioButton
@@ -420,7 +427,7 @@
                                 android:paddingEnd="16dp"
                                 android:paddingStart="16dp"
                                 android:text="@string/questionFourRadioButtonB"
-                                android:textColor="@android:color/darker_gray"
+                                android:textColor="@color/radioButtonColor"
                                 android:textSize="16sp" />
 
                             <RadioButton
@@ -432,7 +439,7 @@
                                 android:paddingEnd="16dp"
                                 android:paddingStart="16dp"
                                 android:text="@string/questionFourRadioButtonC"
-                                android:textColor="@android:color/darker_gray"
+                                android:textColor="@color/radioButtonColor"
                                 android:textSize="16sp" />
 
                             <RadioButton
@@ -445,7 +452,7 @@
                                 android:paddingEnd="16dp"
                                 android:paddingStart="16dp"
                                 android:text="@string/questionFourRadioButtonD"
-                                android:textColor="@android:color/darker_gray"
+                                android:textColor="@color/radioButtonColor"
                                 android:textSize="16sp" />
                         </RadioGroup>
 
@@ -493,10 +500,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="8dp"
-                            android:paddingTop="8dp"
+                            android:padding="8dp"
                             android:text="@string/questionFiveText"
-                            android:textColor="@android:color/black"
-                            android:textSize="16sp" />
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp" />
 
                         <RadioGroup
                             android:layout_width="wrap_content"
@@ -512,7 +519,7 @@
                                 android:paddingEnd="16dp"
                                 android:paddingStart="16dp"
                                 android:text="@string/questionFiveRadioButtonA"
-                                android:textColor="@android:color/darker_gray"
+                                android:textColor="@color/radioButtonColor"
                                 android:textSize="16sp" />
 
                             <RadioButton
@@ -524,7 +531,7 @@
                                 android:paddingEnd="16dp"
                                 android:paddingStart="16dp"
                                 android:text="@string/questionFiveRadioButtonB"
-                                android:textColor="@android:color/darker_gray"
+                                android:textColor="@color/radioButtonColor"
                                 android:textSize="16sp" />
 
                             <RadioButton
@@ -536,7 +543,7 @@
                                 android:paddingEnd="16dp"
                                 android:paddingStart="16dp"
                                 android:text="@string/questionFiveRadioButtonC"
-                                android:textColor="@android:color/darker_gray"
+                                android:textColor="@color/radioButtonColor"
                                 android:textSize="16sp" />
 
                             <RadioButton
@@ -549,7 +556,7 @@
                                 android:paddingEnd="16dp"
                                 android:paddingStart="16dp"
                                 android:text="@string/questionFiveRadioButtonD"
-                                android:textColor="@android:color/darker_gray"
+                                android:textColor="@color/radioButtonColor"
                                 android:textSize="16sp" />
                         </RadioGroup>
 
@@ -597,10 +604,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="8dp"
-                            android:paddingTop="8dp"
+                            android:padding="8dp"
                             android:text="@string/questionSixText"
-                            android:textColor="@android:color/black"
-                            android:textSize="16sp" />
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp" />
 
                         <android.support.v7.widget.AppCompatCheckBox
                             android:id="@+id/question_six_checkbox_a"
@@ -611,7 +618,7 @@
                             android:paddingEnd="16dp"
                             android:paddingStart="16dp"
                             android:text="@string/questionSixCheckBoxA"
-                            android:textColor="@android:color/darker_gray"
+                            android:textColor="@color/radioButtonColor"
                             android:textSize="16sp" />
 
                         <android.support.v7.widget.AppCompatCheckBox
@@ -623,7 +630,7 @@
                             android:paddingEnd="16dp"
                             android:paddingStart="16dp"
                             android:text="@string/questionSixCheckBoxB"
-                            android:textColor="@android:color/darker_gray"
+                            android:textColor="@color/radioButtonColor"
                             android:textSize="16sp" />
 
                         <android.support.v7.widget.AppCompatCheckBox
@@ -635,7 +642,7 @@
                             android:paddingEnd="16dp"
                             android:paddingStart="16dp"
                             android:text="@string/questionSixCheckboxC"
-                            android:textColor="@android:color/darker_gray"
+                            android:textColor="@color/radioButtonColor"
                             android:textSize="16sp" />
 
                         <android.support.v7.widget.AppCompatCheckBox
@@ -648,7 +655,7 @@
                             android:paddingEnd="16dp"
                             android:paddingStart="16dp"
                             android:text="@string/questionSixCheckBoxD"
-                            android:textColor="@android:color/darker_gray"
+                            android:textColor="@color/radioButtonColor"
                             android:textSize="16sp" />
 
                     </LinearLayout>
@@ -695,10 +702,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="8dp"
-                            android:paddingTop="8dp"
+                            android:padding="8dp"
                             android:text="@string/questionSevenText"
-                            android:textColor="@android:color/black"
-                            android:textSize="16sp" />
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp" />
 
                         <RadioGroup
                             android:layout_width="wrap_content"
@@ -714,7 +721,7 @@
                                 android:paddingEnd="16dp"
                                 android:paddingStart="16dp"
                                 android:text="@string/questionSevenRadioButtonA"
-                                android:textColor="@android:color/darker_gray"
+                                android:textColor="@color/radioButtonColor"
                                 android:textSize="16sp" />
 
                             <RadioButton
@@ -726,7 +733,7 @@
                                 android:paddingEnd="16dp"
                                 android:paddingStart="16dp"
                                 android:text="@string/questionSevenRadioButtonB"
-                                android:textColor="@android:color/darker_gray"
+                                android:textColor="@color/radioButtonColor"
                                 android:textSize="16sp" />
 
                             <RadioButton
@@ -738,7 +745,7 @@
                                 android:paddingEnd="16dp"
                                 android:paddingStart="16dp"
                                 android:text="@string/questionSevenRadioButtonC"
-                                android:textColor="@android:color/darker_gray"
+                                android:textColor="@color/radioButtonColor"
                                 android:textSize="16sp" />
 
                             <RadioButton
@@ -751,7 +758,7 @@
                                 android:paddingEnd="16dp"
                                 android:paddingStart="16dp"
                                 android:text="@string/questionSevenRadioButtonD"
-                                android:textColor="@android:color/darker_gray"
+                                android:textColor="@color/radioButtonColor"
                                 android:textSize="16sp" />
                         </RadioGroup>
 
@@ -799,10 +806,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="8dp"
-                            android:paddingTop="8dp"
+                            android:padding="8dp"
                             android:text="@string/questionEightText"
-                            android:textColor="@android:color/black"
-                            android:textSize="16sp" />
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp" />
 
                         <RadioGroup
                             android:layout_width="wrap_content"
@@ -818,7 +825,7 @@
                                 android:paddingEnd="16dp"
                                 android:paddingStart="16dp"
                                 android:text="@string/questionEightRadioButtonA"
-                                android:textColor="@android:color/darker_gray"
+                                android:textColor="@color/radioButtonColor"
                                 android:textSize="16sp" />
 
                             <RadioButton
@@ -830,7 +837,7 @@
                                 android:paddingEnd="16dp"
                                 android:paddingStart="16dp"
                                 android:text="@string/questionEightRadioButtonB"
-                                android:textColor="@android:color/darker_gray"
+                                android:textColor="@color/radioButtonColor"
                                 android:textSize="16sp" />
 
                             <RadioButton
@@ -842,7 +849,7 @@
                                 android:paddingEnd="16dp"
                                 android:paddingStart="16dp"
                                 android:text="@string/questionEightRadioButtonC"
-                                android:textColor="@android:color/darker_gray"
+                                android:textColor="@color/radioButtonColor"
                                 android:textSize="16sp" />
 
                             <RadioButton
@@ -855,7 +862,7 @@
                                 android:paddingEnd="16dp"
                                 android:paddingStart="16dp"
                                 android:text="@string/questionEightRadioButtonD"
-                                android:textColor="@android:color/darker_gray"
+                                android:textColor="@color/radioButtonColor"
                                 android:textSize="16sp" />
                         </RadioGroup>
 
@@ -904,9 +911,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="8dp"
-                            android:paddingTop="8dp"
+                            android:padding="8dp"
                             android:text="@string/questionNineText"
-                            android:textColor="@android:color/black"
+                            android:textColor="@color/colorPrimary"
                             android:textSize="16sp" />
 
                         <EditText
@@ -915,8 +922,8 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="8dp"
                             android:hint="@string/questionNineEditTextHint"
-                            android:paddingTop="8dp"
-                            android:textColor="@android:color/black"
+                            android:padding="8dp"
+                            android:textColor="@color/colorPrimary"
                             android:textSize="16sp" />
 
                     </LinearLayout>
@@ -931,7 +938,7 @@
                 android:layout_marginBottom="24dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:orientation="horizontal">
 
                 <Button
@@ -941,23 +948,23 @@
                     android:layout_marginEnd="16dp"
                     android:layout_marginStart="16dp"
                     android:layout_weight="1"
-                    android:background="#00BCD4"
+                    android:background="@drawable/shape"
                     android:onClick="submitAnswers"
                     android:paddingLeft="8dp"
                     android:paddingRight="8dp"
                     android:text="@string/submitAnswersButton" />
 
                 <Button
-                    android:id="@+id/retake_quiz_button"
+                    android:id="@+id/try_again_button"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"
                     android:layout_weight="1"
-                    android:background="#00BCD4"
-                    android:onClick="retakeQuiz"
+                    android:background="@drawable/shape"
+                    android:onClick="tryAgain"
                     android:paddingLeft="8dp"
                     android:paddingRight="8dp"
-                    android:text="@string/retakeQuizButton" />
+                    android:text="@string/tryAgainButton" />
 
             </LinearLayout>
 

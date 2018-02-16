@@ -3,4 +3,5 @@
     <color name="colorPrimary">@android:color/black</color>
     <color name="colorPrimaryDark">@android:color/black</color>
     <color name="colorAccent">#00BCD4</color>
+    <color name="radioButtonColor">@android:color/darker_gray</color>
 </resources>
