@@ -2,19 +2,17 @@
     <string name="app_name">Quiz App</string>
 
     <!-- Username -->
-    <string name="username_text">Please enter your name</string>
+    <string name="username_text">What is your name</string>
     <string name="username_hint">John</string>
 
     <!--Question 1 -->
-    <string name="questionOneNumber">1</string>
-    <string name="questionOneText">Select the option correctly written in Camel case</string>
+    <string name="questionOneText">Select the option correctly written in camel case</string>
     <string name="questionOneRadioButtonA">NaMeBeThis!</string>
     <string name="questionOneRadioButtonB">NAmeBEthis!</string>
     <string name="questionOneRadioButtonC">NAMEBETHIS!</string>
     <string name="questionOneRadioButtonD">naMeBeThis!</string>
 
     <!--Question 2 -->
-    <string name="questionTwoNumber">2</string>
     <string name="questionTwoText">What ViewGroup was used to create the layout shown?</string>
     <string name="questionTwoRadioButtonA">LinearLayout</string>
     <string name="questionTwoRadioButtonB">ImageView</string>
@@ -22,13 +20,11 @@
     <string name="questionTwoRadioButtonD">RelativeLayout</string>
 
     <!--Question 3 -->
-    <string name="questionThreeNumber">3</string>
     <string name="questionThreeText">Java is an Object Oriented Programming Language. True or False?</string>
     <string name="questionThreeRadioButtonTrue">True</string>
     <string name="questionThreeRadioButtonFalse">False</string>
 
     <!--Question 4 -->
-    <string name="questionFourNumber">4</string>
     <string name="questionFourText">The ______ is used to end java statements</string>
     <string name="questionFourRadioButtonA">Question mark (?)</string>
     <string name="questionFourRadioButtonB">Comma (,)</string>
@@ -44,16 +40,14 @@
     <string name="questionFiveRadioButtonD">sz</string>
 
     <!--Question 6 -->
-    <string name="questionSixNumber">6</string>
-    <string name="questionSixText">When creating XMLs, after sketching the desired layout, you follow three steps. Select the three steps from the list provided </string>
+    <string name="questionSixText">When creating XMLs, after sketching the desired layout, you follow three steps. Select the three that apply </string>
     <string name="questionSixCheckBoxA">Copy the views</string>
     <string name="questionSixCheckBoxB">Position the views</string>
     <string name="questionSixCheckboxC">Style the views</string>
     <string name="questionSixCheckBoxD">Select the views</string>
-    <string name="tooManyOptionsSelectedFloat">Uncheck one first</string>
+    <string name="tooManyOptionsSelectedFloat">Uncheck one button first</string>
 
     <!--Question 7 -->
-    <string name="questionSevenNumber">7</string>
     <string name="questionSevenText">You place photos to be used in your app into the ______ directory </string>
     <string name="questionSevenRadioButtonA">Layout</string>
     <string name="questionSevenRadioButtonB">Styles</string>
@@ -61,20 +55,14 @@
     <string name="questionSevenRadioButtonD">Manifest</string>
 
     <!--Question 8 -->
-    <string name="questionEightNumber">8</string>
     <string name="questionEightText">You ______ your app to identify coding errors</string>
     <string name="questionEightRadioButtonA">Debug</string>
     <string name="questionEightRadioButtonB">Run</string>
     <string name="questionEightRadioButtonC">Refactor</string>
     <string name="questionEightRadioButtonD">Gradle</string>
 
-    <!--Question 9 -->
-    <string name="questionNineNumber">9</string>
-    <string name="questionNineText">Please enter your full name(the same name you provided in the beginning of the quiz) in Camel case </string>
-    <string name="questionNineEditTextHint">Enter name without spacing</string>
-
     <!-- Submit Answer Button -->
-    <string name="submitAnswersButton">Submit Answers</string>
+    <string name="submitButton">Submit</string>
 
     <!-- Retake Quiz Button -->
     <string name="tryAgainButton">Try Again</string>

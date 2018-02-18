@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">@android:color/black</color>
+    <color name="colorPrimary">#E0F7FA</color>
     <color name="colorPrimaryDark">@android:color/black</color>
     <color name="colorAccent">#00BCD4</color>
-    <color name="radioButtonColor">@android:color/darker_gray</color>
+    <color name="radioButtonColor">@android:color/black</color>
+    <color name="questionTextColor">@android:color/black</color>
+    <color name="submitButton">#00BCD4</color>
+    <color name="tryAgainButton">#009688</color>
+
 </resources>
