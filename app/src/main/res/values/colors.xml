@@ -3,7 +3,7 @@
     <color name="colorPrimary">#E0F7FA</color>
     <color name="colorPrimaryDark">@android:color/black</color>
     <color name="colorAccent">#00BCD4</color>
-    <color name="radioButtonColor">@android:color/black</color>
+    <color name="radioButtonColor">#808080</color>
     <color name="questionTextColor">@android:color/black</color>
     <color name="submitButton">#00BCD4</color>
     <color name="tryAgainButton">#009688</color>

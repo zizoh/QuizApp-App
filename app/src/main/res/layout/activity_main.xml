@@ -100,8 +100,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
-                        android:orientation="vertical"
-                        android:textColor="@color/radioButtonColor">
+                        android:orientation="vertical">
 
                         <RadioButton
                             android:id="@+id/question_one_radio_button_a"
@@ -111,6 +110,7 @@
                             android:paddingEnd="16dp"
                             android:paddingStart="16dp"
                             android:text="@string/questionOneRadioButtonA"
+                            android:textColor="@color/radioButtonColor"
                             android:textSize="16sp" />
 
                         <RadioButton
@@ -121,6 +121,7 @@
                             android:paddingEnd="16dp"
                             android:paddingStart="16dp"
                             android:text="@string/questionOneRadioButtonB"
+                            android:textColor="@color/radioButtonColor"
                             android:textSize="16sp" />
 
                         <RadioButton
@@ -131,6 +132,7 @@
                             android:paddingEnd="16dp"
                             android:paddingStart="16dp"
                             android:text="@string/questionOneRadioButtonC"
+                            android:textColor="@color/radioButtonColor"
                             android:textSize="16sp" />
 
                         <RadioButton
@@ -141,6 +143,7 @@
                             android:paddingEnd="16dp"
                             android:paddingStart="16dp"
                             android:text="@string/questionOneRadioButtonD"
+                            android:textColor="@color/radioButtonColor"
                             android:textSize="16sp" />
 
                     </RadioGroup>
@@ -178,8 +181,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
-                        android:orientation="vertical"
-                        android:textColor="@color/radioButtonColor">
+                        android:orientation="vertical">
 
                         <RadioButton
                             android:id="@+id/question_two_radio_button_a"
@@ -189,6 +191,7 @@
                             android:paddingEnd="16dp"
                             android:paddingStart="16dp"
                             android:text="@string/questionTwoRadioButtonA"
+                            android:textColor="@color/radioButtonColor"
                             android:textSize="16sp" />
 
                         <RadioButton
@@ -199,6 +202,7 @@
                             android:paddingEnd="16dp"
                             android:paddingStart="16dp"
                             android:text="@string/questionTwoRadioButtonB"
+                            android:textColor="@color/radioButtonColor"
                             android:textSize="16sp" />
 
                         <RadioButton
@@ -209,6 +213,7 @@
                             android:paddingEnd="16dp"
                             android:paddingStart="16dp"
                             android:text="@string/questionTwoRadioButtonC"
+                            android:textColor="@color/radioButtonColor"
                             android:textSize="16sp" />
 
                         <RadioButton
@@ -219,6 +224,7 @@
                             android:paddingEnd="16dp"
                             android:paddingStart="16dp"
                             android:text="@string/questionTwoRadioButtonD"
+                            android:textColor="@color/radioButtonColor"
                             android:textSize="16sp" />
                     </RadioGroup>
 
@@ -255,8 +261,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
-                        android:orientation="vertical"
-                        android:textColor="@color/radioButtonColor">
+                        android:orientation="vertical">
 
                         <RadioButton
                             android:id="@+id/question_three_radio_button_true"
@@ -266,6 +271,7 @@
                             android:paddingEnd="16dp"
                             android:paddingStart="16dp"
                             android:text="@string/questionThreeRadioButtonTrue"
+                            android:textColor="@color/radioButtonColor"
                             android:textSize="16sp" />
 
                         <RadioButton
@@ -276,6 +282,7 @@
                             android:paddingEnd="16dp"
                             android:paddingStart="16dp"
                             android:text="@string/questionThreeRadioButtonFalse"
+                            android:textColor="@color/radioButtonColor"
                             android:textSize="16sp" />
                     </RadioGroup>
 
@@ -312,8 +319,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
-                        android:orientation="vertical"
-                        android:textColor="@color/radioButtonColor">
+                        android:orientation="vertical">
 
                         <RadioButton
                             android:id="@+id/question_four_radio_button_a"
@@ -323,6 +329,7 @@
                             android:paddingEnd="16dp"
                             android:paddingStart="16dp"
                             android:text="@string/questionFourRadioButtonA"
+                            android:textColor="@color/radioButtonColor"
                             android:textSize="16sp" />
 
                         <RadioButton
@@ -333,6 +340,7 @@
                             android:paddingEnd="16dp"
                             android:paddingStart="16dp"
                             android:text="@string/questionFourRadioButtonB"
+                            android:textColor="@color/radioButtonColor"
                             android:textSize="16sp" />
 
                         <RadioButton
@@ -343,6 +351,7 @@
                             android:paddingEnd="16dp"
                             android:paddingStart="16dp"
                             android:text="@string/questionFourRadioButtonC"
+                            android:textColor="@color/radioButtonColor"
                             android:textSize="16sp" />
 
                         <RadioButton
@@ -353,6 +362,7 @@
                             android:paddingEnd="16dp"
                             android:paddingStart="16dp"
                             android:text="@string/questionFourRadioButtonD"
+                            android:textColor="@color/radioButtonColor"
                             android:textSize="16sp" />
                     </RadioGroup>
 
@@ -389,8 +399,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
-                        android:orientation="vertical"
-                        android:textColor="@color/radioButtonColor">
+                        android:orientation="vertical">
 
                         <RadioButton
                             android:id="@+id/question_five_radio_button_a"
@@ -400,6 +409,7 @@
                             android:paddingEnd="16dp"
                             android:paddingStart="16dp"
                             android:text="@string/questionFiveRadioButtonA"
+                            android:textColor="@color/radioButtonColor"
                             android:textSize="16sp" />
 
                         <RadioButton
@@ -410,6 +420,7 @@
                             android:paddingEnd="16dp"
                             android:paddingStart="16dp"
                             android:text="@string/questionFiveRadioButtonB"
+                            android:textColor="@color/radioButtonColor"
                             android:textSize="16sp" />
 
                         <RadioButton
@@ -420,6 +431,7 @@
                             android:paddingEnd="16dp"
                             android:paddingStart="16dp"
                             android:text="@string/questionFiveRadioButtonC"
+                            android:textColor="@color/radioButtonColor"
                             android:textSize="16sp" />
 
                         <RadioButton
@@ -430,6 +442,7 @@
                             android:paddingEnd="16dp"
                             android:paddingStart="16dp"
                             android:text="@string/questionFiveRadioButtonD"
+                            android:textColor="@color/radioButtonColor"
                             android:textSize="16sp" />
                     </RadioGroup>
 
@@ -540,8 +553,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
-                        android:orientation="vertical"
-                        android:textColor="@color/radioButtonColor">
+                        android:orientation="vertical">
 
                         <RadioButton
                             android:id="@+id/question_seven_radio_button_a"
@@ -551,6 +563,7 @@
                             android:paddingEnd="16dp"
                             android:paddingStart="16dp"
                             android:text="@string/questionSevenRadioButtonA"
+                            android:textColor="@color/radioButtonColor"
                             android:textSize="16sp" />
 
                         <RadioButton
@@ -561,6 +574,7 @@
                             android:paddingEnd="16dp"
                             android:paddingStart="16dp"
                             android:text="@string/questionSevenRadioButtonB"
+                            android:textColor="@color/radioButtonColor"
                             android:textSize="16sp" />
 
                         <RadioButton
@@ -571,6 +585,7 @@
                             android:paddingEnd="16dp"
                             android:paddingStart="16dp"
                             android:text="@string/questionSevenRadioButtonC"
+                            android:textColor="@color/radioButtonColor"
                             android:textSize="16sp" />
 
                         <RadioButton
@@ -581,6 +596,7 @@
                             android:paddingEnd="16dp"
                             android:paddingStart="16dp"
                             android:text="@string/questionSevenRadioButtonD"
+                            android:textColor="@color/radioButtonColor"
                             android:textSize="16sp" />
                     </RadioGroup>
 
@@ -617,8 +633,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
-                        android:orientation="vertical"
-                        android:textColor="@color/radioButtonColor">
+                        android:orientation="vertical">
 
                         <RadioButton
                             android:id="@+id/question_eight_radio_button_a"
@@ -628,6 +643,7 @@
                             android:paddingEnd="16dp"
                             android:paddingStart="16dp"
                             android:text="@string/questionEightRadioButtonA"
+                            android:textColor="@color/radioButtonColor"
                             android:textSize="16sp" />
 
                         <RadioButton
@@ -638,6 +654,7 @@
                             android:paddingEnd="16dp"
                             android:paddingStart="16dp"
                             android:text="@string/questionEightRadioButtonB"
+                            android:textColor="@color/radioButtonColor"
                             android:textSize="16sp" />
 
                         <RadioButton
@@ -648,6 +665,7 @@
                             android:paddingEnd="16dp"
                             android:paddingStart="16dp"
                             android:text="@string/questionEightRadioButtonC"
+                            android:textColor="@color/radioButtonColor"
                             android:textSize="16sp" />
 
                         <RadioButton
@@ -658,6 +676,7 @@
                             android:paddingEnd="16dp"
                             android:paddingStart="16dp"
                             android:text="@string/questionEightRadioButtonD"
+                            android:textColor="@color/radioButtonColor"
                             android:textSize="16sp" />
                     </RadioGroup>
 
@@ -679,12 +698,12 @@
                     android:layout_marginEnd="16dp"
                     android:layout_marginStart="16dp"
                     android:layout_weight="1"
-                    android:theme="@style/QuizAppTheme.SubmitButton"
                     android:onClick="submitAnswers"
                     android:paddingLeft="8dp"
                     android:paddingRight="8dp"
                     android:text="@string/submitButton"
-                    android:textAllCaps="false" />
+                    android:textAllCaps="false"
+                    android:theme="@style/QuizAppTheme.SubmitButton" />
 
                 <android.support.v7.widget.AppCompatButton
                     android:id="@+id/try_again_button"
@@ -692,12 +711,12 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"
                     android:layout_weight="1"
-                    android:theme="@style/QuizAppTheme.TryAgainButton"
                     android:onClick="tryAgain"
                     android:paddingLeft="8dp"
                     android:paddingRight="8dp"
                     android:text="@string/tryAgainButton"
-                    android:textAllCaps="false" />
+                    android:textAllCaps="false"
+                    android:theme="@style/QuizAppTheme.TryAgainButton" />
 
             </LinearLayout>
 
