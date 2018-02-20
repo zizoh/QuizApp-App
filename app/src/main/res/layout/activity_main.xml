@@ -669,7 +669,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="24dp"
                 android:orientation="horizontal">
 
                 <android.support.v7.widget.AppCompatButton
@@ -679,7 +679,7 @@
                     android:layout_marginEnd="16dp"
                     android:layout_marginStart="16dp"
                     android:layout_weight="1"
-                    android:background="@drawable/submit_button"
+                    android:theme="@style/QuizAppTheme.SubmitButton"
                     android:onClick="submitAnswers"
                     android:paddingLeft="8dp"
                     android:paddingRight="8dp"
@@ -692,7 +692,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"
                     android:layout_weight="1"
-                    android:background="@drawable/try_again_button"
+                    android:theme="@style/QuizAppTheme.TryAgainButton"
                     android:onClick="tryAgain"
                     android:paddingLeft="8dp"
                     android:paddingRight="8dp"

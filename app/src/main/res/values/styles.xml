@@ -6,7 +6,6 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="colorButtonNormal">@color/submitButton</item>
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
     </style>
@@ -16,36 +15,9 @@
         <item name="android:colorButtonNormal">@color/submitButton</item>
     </style>
 
-    <style name="QuizAppTheme.SubmitButtonPressed" parent="Widget.AppCompat.Button.Colored">
-        <item name="android:colorButtonNormal">@android:color/transparent</item>
-    </style>
-
     <!-- Try Again button style -->
     <style name="QuizAppTheme.TryAgainButton" parent="Widget.AppCompat.Button.Colored">
         <item name="android:colorButtonNormal">@color/tryAgainButton</item>
     </style>
 
 </resources>
-
-    <!-- &lt;!&ndash; Button styles &ndash;&gt;
- <item name="buttonStyle">@style/Widget.AppCompat.Button</item>
- <item name="buttonStyleSmall">@style/Widget.AppCompat.Button.Small</item>
- <item name="android:textAppearanceButton">@style/TextAppearance.AppCompat.Widget.Button</item>-->
-
-    <!--
-
-    <style name="Base.Widget.AppCompat.Button" parent="android:Widget">
-            <item name="android:background">@drawable/abc_btn_default_mtrl_shape</item>
-            <item name="android:textAppearance">?android:attr/textAppearanceButton</item>
-            <item name="android:minHeight">48dip</item>
-            <item name="android:minWidth">88dip</item>
-            <item name="android:focusable">true</item>
-            <item name="android:clickable">true</item>
-            <item name="android:gravity">center_vertical|center_horizontal</item>
-        </style>
-    -->
-
-    <!--
-
-    <style name="Widget.AppCompat.Button" parent="Base.Widget.AppCompat.Button"/>
-    -->

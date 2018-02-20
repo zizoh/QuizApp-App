@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -34,14 +35,12 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
     }
 
-    /**
-     * This method is called when the Submit Answers button is clicked.
-     */
-
+    // This method is called when the Submit Answers button is clicked.
     public void submitAnswers(View view) {
 
         int finalMarks = markQuestions();
         EditText userName = (EditText) findViewById(R.id.username);
+        Button submitButton = (Button) findViewById(R.id.submit_answers_button);
 
         Toast.makeText(this, "Hey " + userName.getText() + ", you scored " + finalMarks + "/" + totalMarks + "!", Toast.LENGTH_LONG).show();
     }
@@ -673,6 +672,7 @@ public class MainActivity extends AppCompatActivity {
         checkProgressBar(view);
     }
 
+    //This method implements the progress bar
     public void checkProgressBar(View view) {
         ProgressBar progressBar = (ProgressBar) findViewById(R.id.progressBar);
         progressBar.setIndeterminate(false);
