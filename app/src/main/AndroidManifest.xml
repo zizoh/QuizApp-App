@@ -10,9 +10,7 @@
         android:supportsRtl="true"
 
         android:theme="@style/QuizAppTheme">
-        <activity
-            android:name=".MainActivity"
-            android:windowSoftInputMode="stateHidden">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

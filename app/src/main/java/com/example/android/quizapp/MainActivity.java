@@ -9,11 +9,11 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
+import android.widget.ScrollView;
 import android.widget.Toast;
 
 import static android.text.TextUtils.isEmpty;
@@ -21,22 +21,31 @@ import static android.text.TextUtils.isEmpty;
 
 public class MainActivity extends AppCompatActivity {
 
-    //Keys to identify the data saved
-    private static final String KEY_NUMBEROFQUESTIONSANSWERED = "noOfQuestionsAnswered";
-
+    // Keys to identify the data saved
+    static final String STATE_NUMBEROFQUESTIONSANSWERED = "noOfQuestionsAnswered";
+    static final String STATE_QUESTIONONEANSWERED = "questionOneAnswered";
+    static final String STATE_QUESTIONTWOANSWERED = "questionTwoAnswered";
+    static final String STATE_QUESTIONTHREEANSWERED = "questionThreeAnswered";
+    static final String STATE_QUESTIONFOURANSWERED = "questionFourAnswered";
+    static final String STATE_QUESTIONFIVEANSWERED = "questionFiveAnswered";
+    static final String STATE_QUESTIONSIXANSWERED = "questionSixAnswered";
+    static final String STATE_NUMBEROFCHECKBOXESCHECKED = "numberOfCheckboxesChecked";
+    static final String STATE_QUESTIONSEVENANSWERED = "questionSevenAnswered";
+    static final String STATE_QUESTIONEIGHTANSWERED = "questionEightAnswered";
 
     int totalNumberOfQuestions = 8;
     int totalMarks = 10;
-    int noOfQuestionsAnswered = 0;
-    int questionOneAnswered = 0;
-    int questionTwoAnswered = 0;
-    int questionThreeAnswered = 0;
-    int questionFourAnswered = 0;
-    int questionFiveAnswered = 0;
-    int questionSixAnswered = 0;
-    int numberOfCheckboxesChecked = 0;
-    int questionSevenAnswered = 0;
-    int questionEightAnswered = 0;
+    int noOfQuestionsAnswered;
+    int questionOneAnswered;
+    int questionTwoAnswered;
+    int questionThreeAnswered;
+    int questionFourAnswered;
+    int questionFiveAnswered;
+    int questionSixAnswered;
+    int numberOfCheckboxesChecked;
+    int questionSevenAnswered;
+    int questionEightAnswered;
+    EditText questionTwoAnswerEdittext;
 
     ProgressBar progressBar;
 
@@ -47,23 +56,28 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        // Initialize member ProgressBar
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         checkProgressBar(progressBar);
 
-        /*
-        * onCreate method with Bundle argument used to retrieve any saved data
-        * First checks is to know if its null because it will be for the first time
-        * Second check to know if the Bundle contains the keys used to save the data
-        */
+        // Recovering the instance state
+        // Check whether a previously destroyed instance is being recreated
         if (savedInstanceState != null) {
-
-            if (savedInstanceState.containsKey(KEY_NUMBEROFQUESTIONSANSWERED)) {
-                noOfQuestionsAnswered = savedInstanceState.getInt(KEY_NUMBEROFQUESTIONSANSWERED);
-            }
+            // Restore value of members from saved state
+            noOfQuestionsAnswered = savedInstanceState.getInt(STATE_NUMBEROFQUESTIONSANSWERED);
+            questionOneAnswered = savedInstanceState.getInt(STATE_QUESTIONONEANSWERED);
+            questionTwoAnswered = savedInstanceState.getInt(STATE_QUESTIONTWOANSWERED);
+            questionThreeAnswered = savedInstanceState.getInt(STATE_QUESTIONTHREEANSWERED);
+            questionFourAnswered = savedInstanceState.getInt(STATE_QUESTIONFOURANSWERED);
+            questionFiveAnswered = savedInstanceState.getInt(STATE_QUESTIONFIVEANSWERED);
+            questionSixAnswered = savedInstanceState.getInt(STATE_QUESTIONSIXANSWERED);
+            numberOfCheckboxesChecked = savedInstanceState.getInt(STATE_NUMBEROFCHECKBOXESCHECKED);
+            questionSevenAnswered = savedInstanceState.getInt(STATE_QUESTIONSEVENANSWERED);
+            questionEightAnswered = savedInstanceState.getInt(STATE_NUMBEROFQUESTIONSANSWERED);
         }
 
         //This method handles when the user answers Question 2
-        final EditText questionTwoAnswerEdittext = (EditText) findViewById(R.id.question_two_answer_edittext);
+        questionTwoAnswerEdittext = (EditText) findViewById(R.id.question_two_answer_edittext);
         questionTwoAnswerEdittext.addTextChangedListener(new TextWatcher() {
             public void afterTextChanged(Editable s) {
                 CharSequence questionTwoAnswer = questionTwoAnswerEdittext.getText().toString();
@@ -91,14 +105,18 @@ public class MainActivity extends AppCompatActivity {
     public void submitAnswers(View view) {
 
         int finalMarks = markQuestions();
-        EditText userName = (EditText) findViewById(R.id.username);
-        Button submitButton = (Button) findViewById(R.id.submit_answers_button);
+        EditText userNameEdittext = (EditText) findViewById(R.id.username);
 
-        // Hide soft keyboard
-        InputMethodManager imm = (InputMethodManager) MainActivity.this.getSystemService(Context.INPUT_METHOD_SERVICE);
-        imm.hideSoftInputFromWindow(userName.getWindowToken(), 0);
-
-        Toast.makeText(this, "Hey " + userName.getText() + ", you scored " + finalMarks + "/" + totalMarks + "!", Toast.LENGTH_LONG).show();
+        // If no username is provided
+        if (userNameEdittext.getText().toString().equals("")) {
+            // Sets focus on userNameEdittext and show the keyboard
+            userNameEdittext.requestFocus();
+            InputMethodManager imm = (InputMethodManager) MainActivity.this.getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.showSoftInput(userNameEdittext, InputMethodManager.SHOW_IMPLICIT);
+            Toast.makeText(this, R.string.emptyUsernameToast, Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(this, "Hey " + userNameEdittext.getText() + ", you scored " + finalMarks + "/" + totalMarks + "!", Toast.LENGTH_LONG).show();
+        }
     }
 
     // This method handles the click event for Question 1 radio buttons
@@ -524,7 +542,7 @@ public class MainActivity extends AppCompatActivity {
             noOfCorrectQuestionsAnswered++;
         }
         // Question 2 correct answer RelativeLayout (1 mark)
-        EditText questionTwoAnswerEdittext = (EditText) findViewById(R.id.question_two_answer_edittext);
+        questionTwoAnswerEdittext = (EditText) findViewById(R.id.question_two_answer_edittext);
         String questionTwoAnswer = questionTwoAnswerEdittext.getText().toString().toUpperCase().replaceAll("\\s", "");
 
         if (questionTwoAnswer.equals("RELATIVELAYOUT")
@@ -594,8 +612,12 @@ public class MainActivity extends AppCompatActivity {
         return noOfCorrectQuestionsAnswered;
     }
 
-    // This method is called when the Try Again button is clicked
-    public void tryAgain(View view) {
+    // This method is called when the Reset button is clicked
+    public void resetQuiz(View view) {
+        // Brings window focus to top of scrollView
+        ScrollView scrollView = (ScrollView) findViewById(R.id.scrollView);
+        scrollView.smoothScrollTo(0, view.getTop());
+
         // Question 1
         RadioButton questionOneRadioButtonA = (RadioButton) findViewById(R.id.question_one_radio_button_a);
         questionOneRadioButtonA.setChecked(false);
@@ -607,7 +629,7 @@ public class MainActivity extends AppCompatActivity {
         questionOneRadioButtonD.setChecked(false);
 
         // Question 2
-        EditText questionTwoAnswerEdittext = (EditText) findViewById(R.id.question_two_answer_edittext);
+        questionTwoAnswerEdittext = (EditText) findViewById(R.id.question_two_answer_edittext);
         questionTwoAnswerEdittext.setText("");
 
         // Question 3
@@ -679,7 +701,7 @@ public class MainActivity extends AppCompatActivity {
         checkProgressBar(view);
     }
 
-    //This method implements the progress bar
+    // This method implements the progress bar
     public void checkProgressBar(View view) {
         progressBar.setIndeterminate(false);
         progressBar.setMax(totalNumberOfQuestions);
@@ -688,14 +710,24 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /*This method is called before the activity is destroyed to save the noOfQuestionsAnswered value
-    * The value is saved to the bundle using a key value pair
-    */
+    // Method invoked before the activity is temporarily destroyed, save the instance state here
+    // Values saved to the bundle using key value pairs
     @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        // Save the current integer values
+        savedInstanceState.putInt(STATE_NUMBEROFQUESTIONSANSWERED, noOfQuestionsAnswered);
+        savedInstanceState.putInt(STATE_QUESTIONONEANSWERED, questionOneAnswered);
+        savedInstanceState.putInt(STATE_QUESTIONTWOANSWERED, questionTwoAnswered);
+        savedInstanceState.putInt(STATE_QUESTIONTHREEANSWERED, questionThreeAnswered);
+        savedInstanceState.putInt(STATE_QUESTIONFOURANSWERED, questionFourAnswered);
+        savedInstanceState.putInt(STATE_QUESTIONFIVEANSWERED, questionFiveAnswered);
+        savedInstanceState.putInt(STATE_QUESTIONSIXANSWERED, questionSixAnswered);
+        savedInstanceState.putInt(STATE_NUMBEROFCHECKBOXESCHECKED, numberOfCheckboxesChecked);
+        savedInstanceState.putInt(STATE_QUESTIONSEVENANSWERED, questionSevenAnswered);
+        savedInstanceState.putInt(STATE_QUESTIONEIGHTANSWERED, questionEightAnswered);
 
-        outState.putInt(KEY_NUMBEROFQUESTIONSANSWERED, noOfQuestionsAnswered);
+        // Call to superclass so it can save the view hierarchy state
+        super.onSaveInstanceState(savedInstanceState);
     }
 }
 

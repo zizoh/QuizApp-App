@@ -2,7 +2,7 @@
     <string name="app_name">Quiz App</string>
 
     <!-- Username -->
-    <string name="username_text">What is your name</string>
+    <string name="username_text">What is your name?</string>
     <string name="username_hint">John</string>
 
     <!--Question 1 -->
@@ -14,7 +14,7 @@
 
     <!--Question 2 -->
     <string name="questionTwoText">What is the name of the ViewGroup used to position child views relative to its siblings or the parent?</string>
-    <string name="questionTwoAnswerHint">Enter ViewGroup name here</string>
+    <string name="questionTwoAnswerHint">Enter ViewGroup Name Here</string>
 
     <!--Question 3 -->
     <string name="questionThreeText">Java is an Object Oriented Programming Language. True or False?</string>
@@ -37,7 +37,8 @@
     <string name="questionFiveRadioButtonD">sz</string>
 
     <!--Question 6 -->
-    <string name="questionSixText">When creating XMLs, after sketching the desired layout, you follow three steps. Select the three that apply </string>
+    <string name="questionSixText">When creating XMLs, after sketching the desired layout, you follow three steps. </string>
+    <string name="questionSixInstruction">Select the three that apply </string>
     <string name="questionSixCheckBoxA">Copy the views</string>
     <string name="questionSixCheckBoxB">Position the views</string>
     <string name="questionSixCheckboxC">Style the views</string>
@@ -60,8 +61,9 @@
 
     <!-- Submit Answer Button -->
     <string name="submitButton">Submit</string>
+    <string name="emptyUsernameToast">PLEASE ENTER USERNAME</string>
 
     <!-- Retake Quiz Button -->
-    <string name="tryAgainButton">Try Again</string>
+    <string name="resetButton">Reset</string>
 
 </resources>

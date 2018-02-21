@@ -22,6 +22,7 @@
         android:background="@android:color/white" />
 
     <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/progressBar"
@@ -448,9 +449,17 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
-                        android:layout_marginTop="8dp"
                         android:layout_weight="1"
                         android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:padding="8dp"
+                            android:text="@string/questionSixInstruction"
+                            android:textColor="@color/radioButtonColor"
+                            android:textSize="16sp" />
 
                         <android.support.v7.widget.AppCompatCheckBox
                             android:id="@+id/question_six_checkbox_a"
@@ -688,17 +697,17 @@
                     android:theme="@style/QuizAppTheme.SubmitButton" />
 
                 <android.support.v7.widget.AppCompatButton
-                    android:id="@+id/try_again_button"
+                    android:id="@+id/reset_button"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"
                     android:layout_weight="1"
-                    android:onClick="tryAgain"
+                    android:onClick="resetQuiz"
                     android:paddingLeft="8dp"
                     android:paddingRight="8dp"
-                    android:text="@string/tryAgainButton"
+                    android:text="@string/resetButton"
                     android:textAllCaps="false"
-                    android:theme="@style/QuizAppTheme.TryAgainButton" />
+                    android:theme="@style/QuizAppTheme.ResetButton" />
 
             </LinearLayout>
 

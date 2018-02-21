@@ -16,8 +16,8 @@
     </style>
 
     <!-- Try Again button style -->
-    <style name="QuizAppTheme.TryAgainButton" parent="Widget.AppCompat.Button.Colored">
-        <item name="android:colorButtonNormal">@color/tryAgainButton</item>
+    <style name="QuizAppTheme.ResetButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:colorButtonNormal">@color/resetButton</item>
     </style>
 
 </resources>
