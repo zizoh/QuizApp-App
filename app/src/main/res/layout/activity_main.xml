@@ -50,6 +50,7 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/username_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="8dp"
@@ -63,8 +64,6 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/username_hint"
                         android:inputType="textPersonName"
-                        android:nextFocusLeft="@id/username"
-                        android:nextFocusUp="@id/username"
                         android:padding="8dp" />
 
                 </LinearLayout>
@@ -169,6 +168,7 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/questionTwoText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
@@ -177,56 +177,11 @@
                         android:textColor="@color/questionTextColor"
                         android:textSize="18sp" />
 
-                    <RadioGroup
+                    <EditText
+                        android:id="@+id/question_two_answer_edittext"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:orientation="vertical">
-
-                        <RadioButton
-                            android:id="@+id/question_two_radio_button_a"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:onClick="onQuestionTwoRadioButtonClicked"
-                            android:paddingEnd="16dp"
-                            android:paddingStart="16dp"
-                            android:text="@string/questionTwoRadioButtonA"
-                            android:textColor="@color/radioButtonColor"
-                            android:textSize="16sp" />
-
-                        <RadioButton
-                            android:id="@+id/question_two_radio_button_b"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:onClick="onQuestionTwoRadioButtonClicked"
-                            android:paddingEnd="16dp"
-                            android:paddingStart="16dp"
-                            android:text="@string/questionTwoRadioButtonB"
-                            android:textColor="@color/radioButtonColor"
-                            android:textSize="16sp" />
-
-                        <RadioButton
-                            android:id="@+id/question_two_radio_button_c"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:onClick="onQuestionTwoRadioButtonClicked"
-                            android:paddingEnd="16dp"
-                            android:paddingStart="16dp"
-                            android:text="@string/questionTwoRadioButtonC"
-                            android:textColor="@color/radioButtonColor"
-                            android:textSize="16sp" />
-
-                        <RadioButton
-                            android:id="@+id/question_two_radio_button_d"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:onClick="onQuestionTwoRadioButtonClicked"
-                            android:paddingEnd="16dp"
-                            android:paddingStart="16dp"
-                            android:text="@string/questionTwoRadioButtonD"
-                            android:textColor="@color/radioButtonColor"
-                            android:textSize="16sp" />
-                    </RadioGroup>
+                        android:hint="@string/questionTwoAnswerHint" />
 
                 </LinearLayout>
 

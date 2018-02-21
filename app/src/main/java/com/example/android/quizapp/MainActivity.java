@@ -1,10 +1,14 @@
 package com.example.android.quizapp;
 
+import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -12,8 +16,15 @@ import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import static android.text.TextUtils.isEmpty;
+
 
 public class MainActivity extends AppCompatActivity {
+
+    //Keys to identify the data saved
+    private static final String KEY_NUMBEROFQUESTIONSANSWERED = "noOfQuestionsAnswered";
+
+
     int totalNumberOfQuestions = 8;
     int totalMarks = 10;
     int noOfQuestionsAnswered = 0;
@@ -27,12 +38,53 @@ public class MainActivity extends AppCompatActivity {
     int questionSevenAnswered = 0;
     int questionEightAnswered = 0;
 
+    ProgressBar progressBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        checkProgressBar(progressBar);
+
+        /*
+        * onCreate method with Bundle argument used to retrieve any saved data
+        * First checks is to know if its null because it will be for the first time
+        * Second check to know if the Bundle contains the keys used to save the data
+        */
+        if (savedInstanceState != null) {
+
+            if (savedInstanceState.containsKey(KEY_NUMBEROFQUESTIONSANSWERED)) {
+                noOfQuestionsAnswered = savedInstanceState.getInt(KEY_NUMBEROFQUESTIONSANSWERED);
+            }
+        }
+
+        //This method handles when the user answers Question 2
+        final EditText questionTwoAnswerEdittext = (EditText) findViewById(R.id.question_two_answer_edittext);
+        questionTwoAnswerEdittext.addTextChangedListener(new TextWatcher() {
+            public void afterTextChanged(Editable s) {
+                CharSequence questionTwoAnswer = questionTwoAnswerEdittext.getText().toString();
+                if (isEmpty(questionTwoAnswer) && questionTwoAnswered == 0) {
+                } else if (questionTwoAnswer.length() == 1 && questionTwoAnswered == 0) {
+                    questionTwoAnswered = 1;
+                    noOfQuestionsAnswered++;
+                    checkProgressBar(progressBar);
+                } else if (isEmpty(questionTwoAnswer) && questionTwoAnswered == 1) {
+                    questionTwoAnswered = 0;
+                    noOfQuestionsAnswered--;
+                    checkProgressBar(progressBar);
+                }
+            }
+
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+        });
     }
 
     // This method is called when the Submit Answers button is clicked.
@@ -41,6 +93,10 @@ public class MainActivity extends AppCompatActivity {
         int finalMarks = markQuestions();
         EditText userName = (EditText) findViewById(R.id.username);
         Button submitButton = (Button) findViewById(R.id.submit_answers_button);
+
+        // Hide soft keyboard
+        InputMethodManager imm = (InputMethodManager) MainActivity.this.getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(userName.getWindowToken(), 0);
 
         Toast.makeText(this, "Hey " + userName.getText() + ", you scored " + finalMarks + "/" + totalMarks + "!", Toast.LENGTH_LONG).show();
     }
@@ -88,55 +144,6 @@ public class MainActivity extends AppCompatActivity {
                         noOfQuestionsAnswered++;
                         checkProgressBar(view);
                         questionOneAnswered = 1;
-                    }
-                }
-                break;
-        }
-    }
-
-    // This method handles the click event for Question 2 radio buttons
-    public void onQuestionTwoRadioButtonClicked(View view) {
-        // Is the button now checked?
-        boolean checkedQuestionTwo = ((RadioButton) view).isChecked();
-        // Check which radio button was clicked
-        switch (view.getId()) {
-            case R.id.question_two_radio_button_a: // LinearLayout
-                if (checkedQuestionTwo && questionTwoAnswered == 1) {
-                } else {
-                    if (checkedQuestionTwo) {
-                        noOfQuestionsAnswered++;
-                        checkProgressBar(view);
-                        questionTwoAnswered = 1;
-                    }
-                }
-                break;
-            case R.id.question_two_radio_button_b: // ImageView
-                if (checkedQuestionTwo && questionTwoAnswered == 1) {
-                } else {
-                    if (checkedQuestionTwo) {
-                        noOfQuestionsAnswered++;
-                        checkProgressBar(view);
-                        questionTwoAnswered = 1;
-                    }
-                }
-                break;
-            case R.id.question_two_radio_button_c: // Button
-                if (checkedQuestionTwo && questionTwoAnswered == 1) {
-                } else {
-                    if (checkedQuestionTwo) {
-                        noOfQuestionsAnswered++;
-                        checkProgressBar(view);
-                        questionTwoAnswered = 1;
-                    }
-                }
-                break;
-            case R.id.question_two_radio_button_d: // RelativeLayout
-                if (checkedQuestionTwo && questionTwoAnswered == 1) {
-                } else {
-                    if (checkedQuestionTwo) {
-                        noOfQuestionsAnswered++;
-                        checkProgressBar(view);
-                        questionTwoAnswered = 1;
                     }
                 }
                 break;
@@ -516,13 +523,15 @@ public class MainActivity extends AppCompatActivity {
         if (answerQuestionOneRadioButtonD) {
             noOfCorrectQuestionsAnswered++;
         }
-        // Question 2 correct answer D (1 mark)
-        RadioButton questionTwoRadioButtonD = (RadioButton) findViewById(R.id.question_two_radio_button_d);
-        boolean answerQuestionTwoRadioButtonD = questionTwoRadioButtonD.isChecked();
+        // Question 2 correct answer RelativeLayout (1 mark)
+        EditText questionTwoAnswerEdittext = (EditText) findViewById(R.id.question_two_answer_edittext);
+        String questionTwoAnswer = questionTwoAnswerEdittext.getText().toString().toUpperCase().replaceAll("\\s", "");
 
-        if (answerQuestionTwoRadioButtonD) {
+        if (questionTwoAnswer.equals("RELATIVELAYOUT")
+                || questionTwoAnswer.equals("RELATIVELAYOUT.")) {
             noOfCorrectQuestionsAnswered++;
         }
+
         // Question 3 correct answer True (1 mark)
         RadioButton questionThreeRadioButtonTrue = (RadioButton) findViewById(R.id.question_three_radio_button_true);
         boolean answerQuestionThreeRadioButtonTrue = questionThreeRadioButtonTrue.isChecked();
@@ -530,6 +539,7 @@ public class MainActivity extends AppCompatActivity {
         if (answerQuestionThreeRadioButtonTrue) {
             noOfCorrectQuestionsAnswered++;
         }
+
         // Question 4 correct answer C (1 mark)
         RadioButton questionFourRadioButtonC = (RadioButton) findViewById(R.id.question_four_radio_button_c);
         boolean answerQuestionFourRadioButtonC = questionFourRadioButtonC.isChecked();
@@ -537,6 +547,7 @@ public class MainActivity extends AppCompatActivity {
         if (answerQuestionFourRadioButtonC) {
             noOfCorrectQuestionsAnswered++;
         }
+
         // Question 5 correct answer A (1 mark)
         RadioButton questionFiveRadioButtonA = (RadioButton) findViewById(R.id.question_five_radio_button_a);
         boolean answerQuestionFiveRadioButtonA = questionFiveRadioButtonA.isChecked();
@@ -544,6 +555,7 @@ public class MainActivity extends AppCompatActivity {
         if (answerQuestionFiveRadioButtonA) {
             noOfCorrectQuestionsAnswered++;
         }
+
         // Question 6 correct answer Checkboxes B, C and D (3 marks)
         CheckBox questionSixCheckboxB = (CheckBox) findViewById(R.id.question_six_checkbox_b);
         boolean answerQuestionSixCheckboxB = questionSixCheckboxB.isChecked();
@@ -571,6 +583,7 @@ public class MainActivity extends AppCompatActivity {
         if (answerQuestionSevenRadioButtonC) {
             noOfCorrectQuestionsAnswered++;
         }
+
         // Question 8 correct answer A (1 mark)
         RadioButton questionEightRadioButtonA = (RadioButton) findViewById(R.id.question_eight_radio_button_a);
         boolean answerQuestionEightRadioButtonA = questionEightRadioButtonA.isChecked();
@@ -594,14 +607,8 @@ public class MainActivity extends AppCompatActivity {
         questionOneRadioButtonD.setChecked(false);
 
         // Question 2
-        RadioButton questionTwoRadioButtonA = (RadioButton) findViewById(R.id.question_two_radio_button_a);
-        questionTwoRadioButtonA.setChecked(false);
-        RadioButton questionTwoRadioButtonB = (RadioButton) findViewById(R.id.question_two_radio_button_b);
-        questionTwoRadioButtonB.setChecked(false);
-        RadioButton questionTwoRadioButtonC = (RadioButton) findViewById(R.id.question_two_radio_button_c);
-        questionTwoRadioButtonC.setChecked(false);
-        RadioButton questionTwoRadioButtonD = (RadioButton) findViewById(R.id.question_two_radio_button_d);
-        questionTwoRadioButtonD.setChecked(false);
+        EditText questionTwoAnswerEdittext = (EditText) findViewById(R.id.question_two_answer_edittext);
+        questionTwoAnswerEdittext.setText("");
 
         // Question 3
         RadioButton questionThreeRadioButtonTrue = (RadioButton) findViewById(R.id.question_three_radio_button_true);
@@ -674,12 +681,21 @@ public class MainActivity extends AppCompatActivity {
 
     //This method implements the progress bar
     public void checkProgressBar(View view) {
-        ProgressBar progressBar = (ProgressBar) findViewById(R.id.progressBar);
         progressBar.setIndeterminate(false);
         progressBar.setMax(totalNumberOfQuestions);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             progressBar.setProgress(noOfQuestionsAnswered, true);
         }
+    }
+
+    /*This method is called before the activity is destroyed to save the noOfQuestionsAnswered value
+    * The value is saved to the bundle using a key value pair
+    */
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        outState.putInt(KEY_NUMBEROFQUESTIONSANSWERED, noOfQuestionsAnswered);
     }
 }
 

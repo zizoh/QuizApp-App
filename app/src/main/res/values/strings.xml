@@ -13,11 +13,8 @@
     <string name="questionOneRadioButtonD">naMeBeThis!</string>
 
     <!--Question 2 -->
-    <string name="questionTwoText">What ViewGroup was used to create the layout shown?</string>
-    <string name="questionTwoRadioButtonA">LinearLayout</string>
-    <string name="questionTwoRadioButtonB">ImageView</string>
-    <string name="questionTwoRadioButtonC">Button</string>
-    <string name="questionTwoRadioButtonD">RelativeLayout</string>
+    <string name="questionTwoText">What is the name of the ViewGroup used to position child views relative to its siblings or the parent?</string>
+    <string name="questionTwoAnswerHint">Enter ViewGroup name here</string>
 
     <!--Question 3 -->
     <string name="questionThreeText">Java is an Object Oriented Programming Language. True or False?</string>
