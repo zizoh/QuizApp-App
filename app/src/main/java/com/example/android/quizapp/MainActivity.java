@@ -1,14 +1,19 @@
 package com.example.android.quizapp;
 
+import android.app.Dialog;
+import android.app.DialogFragment;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -56,10 +61,6 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        // Initialize member ProgressBar
-        progressBar = (ProgressBar) findViewById(R.id.progressBar);
-        checkProgressBar(progressBar);
-
         // Recovering the instance state
         // Check whether a previously destroyed instance is being recreated
         if (savedInstanceState != null) {
@@ -75,6 +76,10 @@ public class MainActivity extends AppCompatActivity {
             questionSevenAnswered = savedInstanceState.getInt(STATE_QUESTIONSEVENANSWERED);
             questionEightAnswered = savedInstanceState.getInt(STATE_NUMBEROFQUESTIONSANSWERED);
         }
+
+        // Initialize ProgressBar
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        checkProgressBar(progressBar);
 
         //This method handles when the user answers Question 2
         questionTwoAnswerEdittext = (EditText) findViewById(R.id.question_two_answer_edittext);
@@ -108,13 +113,24 @@ public class MainActivity extends AppCompatActivity {
         EditText userNameEdittext = (EditText) findViewById(R.id.username);
 
         // If no username is provided
-        if (userNameEdittext.getText().toString().equals("")) {
+        if (userNameEdittext.getText().toString().isEmpty()) {
             // Sets focus on userNameEdittext and show the keyboard
             userNameEdittext.requestFocus();
+
+            // Brings window focus to top of scrollView
+            ScrollView scrollView = (ScrollView) findViewById(R.id.scrollView);
+            scrollView.smoothScrollTo(0, view.getTop());
+
+            // Show softInputKeyboard and show Toast
             InputMethodManager imm = (InputMethodManager) MainActivity.this.getSystemService(Context.INPUT_METHOD_SERVICE);
             imm.showSoftInput(userNameEdittext, InputMethodManager.SHOW_IMPLICIT);
             Toast.makeText(this, R.string.emptyUsernameToast, Toast.LENGTH_LONG).show();
         } else {
+            // Keep window focus at submit button, hide softInputKeyboard and show Toast
+            Button submitButton = (Button) findViewById(R.id.submit_answers_button);
+            submitButton.requestFocusFromTouch();
+            InputMethodManager imm = (InputMethodManager) MainActivity.this.getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
             Toast.makeText(this, "Hey " + userNameEdittext.getText() + ", you scored " + finalMarks + "/" + totalMarks + "!", Toast.LENGTH_LONG).show();
         }
     }
@@ -123,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
     public void onQuestionOneRadioButtonClicked(View view) {
         // Is the button now checked?
         boolean checkedQuestionOne = ((RadioButton) view).isChecked();
-        // Check which radio button was clicked
+        // Check which radio button was checked
         switch (view.getId()) {
             case R.id.question_one_radio_button_a:  // NaMeBeThis
                 if (checkedQuestionOne && questionOneAnswered == 1) {
@@ -172,7 +188,7 @@ public class MainActivity extends AppCompatActivity {
     public void onQuestionThreeRadioButtonClicked(View view) {
         // Is the button now checked?
         boolean checkedQuestionThree = ((RadioButton) view).isChecked();
-        // Check which radio button was clicked
+        // Check which radio button was checked
         switch (view.getId()) {
             case R.id.question_three_radio_button_true: // True
                 if (checkedQuestionThree && questionThreeAnswered == 1) {
@@ -201,7 +217,7 @@ public class MainActivity extends AppCompatActivity {
     public void onQuestionFourRadioButtonClicked(View view) {
         // Is the button now checked?
         boolean checkedQuestionFour = ((RadioButton) view).isChecked();
-        // Check which radio button was clicked
+        // Check which radio button was checked
         switch (view.getId()) {
             case R.id.question_four_radio_button_a: // Question mark (?)
                 if (checkedQuestionFour && questionFourAnswered == 1) {
@@ -250,7 +266,7 @@ public class MainActivity extends AppCompatActivity {
     public void onQuestionFiveRadioButtonClicked(View view) {
         // Is the button now checked?
         boolean checkedQuestionFive = ((RadioButton) view).isChecked();
-        // Check which radio button was clicked
+        // Check which radio button was checked
         switch (view.getId()) {
             case R.id.question_five_radio_button_a: // sp
                 if (checkedQuestionFive && questionFiveAnswered == 1) {
@@ -614,6 +630,7 @@ public class MainActivity extends AppCompatActivity {
 
     // This method is called when the Reset button is clicked
     public void resetQuiz(View view) {
+
         // Brings window focus to top of scrollView
         ScrollView scrollView = (ScrollView) findViewById(R.id.scrollView);
         scrollView.smoothScrollTo(0, view.getTop());
@@ -699,6 +716,9 @@ public class MainActivity extends AppCompatActivity {
         questionSevenAnswered = 0;
         questionEightAnswered = 0;
         checkProgressBar(view);
+
+        DialogFragment newFragment = new ResetQuizDialogFragment();
+        newFragment.show(getFragmentManager(), "resetQuiz");
     }
 
     // This method implements the progress bar
@@ -729,5 +749,22 @@ public class MainActivity extends AppCompatActivity {
         // Call to superclass so it can save the view hierarchy state
         super.onSaveInstanceState(savedInstanceState);
     }
-}
 
+    public static class ResetQuizDialogFragment extends DialogFragment {
+        @Override
+        public Dialog onCreateDialog(Bundle savedInstanceState) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+            builder.setMessage(R.string.dialogMessage);
+
+            builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    // User clicked OK button
+                }
+            });
+
+            // Create the AlertDialog
+            return builder.create();
+        }
+    }
+
+}

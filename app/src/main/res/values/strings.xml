@@ -13,7 +13,7 @@
     <string name="questionOneRadioButtonD">naMeBeThis!</string>
 
     <!--Question 2 -->
-    <string name="questionTwoText">What is the name of the ViewGroup used to position child views relative to its siblings or the parent?</string>
+    <string name="questionTwoText">What is the name of the ViewGroup used to position child views relative to their sibling or parent?</string>
     <string name="questionTwoAnswerHint">Enter ViewGroup Name Here</string>
 
     <!--Question 3 -->
@@ -29,8 +29,7 @@
     <string name="questionFourRadioButtonD">Exclamation mark (!)</string>
 
     <!--Question 5 -->
-    <string name="questionFiveNumber">5</string>
-    <string name="questionFiveText">The correct unit for the android xml attribute textSize is </string>
+    <string name="questionFiveText">The correct unit for the xml attribute textSize is</string>
     <string name="questionFiveRadioButtonA">sp</string>
     <string name="questionFiveRadioButtonB">tz</string>
     <string name="questionFiveRadioButtonC">jz</string>
@@ -38,7 +37,7 @@
 
     <!--Question 6 -->
     <string name="questionSixText">When creating XMLs, after sketching the desired layout, you follow three steps. </string>
-    <string name="questionSixInstruction">Select the three that apply </string>
+    <string name="questionSixInstruction">Select the three that apply</string>
     <string name="questionSixCheckBoxA">Copy the views</string>
     <string name="questionSixCheckBoxB">Position the views</string>
     <string name="questionSixCheckboxC">Style the views</string>
@@ -46,7 +45,7 @@
     <string name="tooManyOptionsSelectedFloat">Uncheck one button first</string>
 
     <!--Question 7 -->
-    <string name="questionSevenText">You place photos to be used in your app into the ______ directory </string>
+    <string name="questionSevenText">You place photos to be used in your app into the ______ directory</string>
     <string name="questionSevenRadioButtonA">Layout</string>
     <string name="questionSevenRadioButtonB">Styles</string>
     <string name="questionSevenRadioButtonC">Drawable</string>
@@ -65,5 +64,8 @@
 
     <!-- Retake Quiz Button -->
     <string name="resetButton">Reset</string>
+    <string name="dialogMessage">To repeat the same answer for a question,
+        you need to first choose a different button</string>
+    <string name="ok">OK</string>
 
 </resources>
