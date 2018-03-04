@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -118,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
             userNameEdittext.requestFocus();
 
             // Brings window focus to top of scrollView
-            ScrollView scrollView = (ScrollView) findViewById(R.id.scrollView);
+            NestedScrollView scrollView = (NestedScrollView) findViewById(R.id.scrollView);
             scrollView.smoothScrollTo(0, view.getTop());
 
             // Show softInputKeyboard and show Toast
