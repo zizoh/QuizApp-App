@@ -19,7 +19,6 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
-import android.widget.ScrollView;
 import android.widget.Toast;
 
 import static android.text.TextUtils.isEmpty;
@@ -54,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
     EditText questionTwoAnswerEdittext;
 
     ProgressBar progressBar;
+    NestedScrollView scrollView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
             userNameEdittext.requestFocus();
 
             // Brings window focus to top of scrollView
-            NestedScrollView scrollView = (NestedScrollView) findViewById(R.id.scrollView);
+            scrollView = (NestedScrollView) findViewById(R.id.scrollView);
             scrollView.smoothScrollTo(0, view.getTop());
 
             // Show softInputKeyboard and show Toast
@@ -633,7 +633,7 @@ public class MainActivity extends AppCompatActivity {
     public void resetQuiz(View view) {
 
         // Brings window focus to top of scrollView
-        ScrollView scrollView = (ScrollView) findViewById(R.id.scrollView);
+        scrollView = (NestedScrollView) findViewById(R.id.scrollView);
         scrollView.smoothScrollTo(0, view.getTop());
 
         // Question 1
