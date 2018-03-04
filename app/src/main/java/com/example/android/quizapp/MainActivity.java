@@ -40,16 +40,16 @@ public class MainActivity extends AppCompatActivity {
 
     int totalNumberOfQuestions = 8;
     int totalMarks = 10;
-    int noOfQuestionsAnswered;
-    int questionOneAnswered;
-    int questionTwoAnswered;
-    int questionThreeAnswered;
-    int questionFourAnswered;
-    int questionFiveAnswered;
-    int questionSixAnswered;
-    int numberOfCheckboxesChecked;
-    int questionSevenAnswered;
-    int questionEightAnswered;
+    int noOfQuestionsAnswered = 0;
+    int questionOneAnswered = 0;
+    int questionTwoAnswered = 0;
+    int questionThreeAnswered = 0;
+    int questionFourAnswered = 0;
+    int questionFiveAnswered = 0;
+    int questionSixAnswered = 0;
+    int numberOfCheckboxesChecked = 0;
+    int questionSevenAnswered = 0;
+    int questionEightAnswered = 0;
     EditText questionTwoAnswerEdittext;
 
     ProgressBar progressBar;
