@@ -19,6 +19,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import static android.text.TextUtils.isEmpty;
@@ -632,49 +633,29 @@ public class MainActivity extends AppCompatActivity {
     // This method is called when the Reset button is clicked
     public void resetQuiz(View view) {
 
-        // Brings window focus to top of scrollView
+        // Brings window focus to top of scrollView so user can retake quiz
         scrollView = (NestedScrollView) findViewById(R.id.scrollView);
         scrollView.smoothScrollTo(0, view.getTop());
 
         // Question 1
-        RadioButton questionOneRadioButtonA = (RadioButton) findViewById(R.id.question_one_radio_button_a);
-        questionOneRadioButtonA.setChecked(false);
-        RadioButton questionOneRadioButtonB = (RadioButton) findViewById(R.id.question_one_radio_button_b);
-        questionOneRadioButtonB.setChecked(false);
-        RadioButton questionOneRadioButtonC = (RadioButton) findViewById(R.id.question_one_radio_button_c);
-        questionOneRadioButtonC.setChecked(false);
-        RadioButton questionOneRadioButtonD = (RadioButton) findViewById(R.id.question_one_radio_button_d);
-        questionOneRadioButtonD.setChecked(false);
+        RadioGroup questionOneRadioGroup = (RadioGroup) findViewById(R.id.question_one_radio_group);
+        questionOneRadioGroup.clearCheck();
 
         // Question 2
         questionTwoAnswerEdittext = (EditText) findViewById(R.id.question_two_answer_edittext);
         questionTwoAnswerEdittext.setText("");
 
         // Question 3
-        RadioButton questionThreeRadioButtonTrue = (RadioButton) findViewById(R.id.question_three_radio_button_true);
-        questionThreeRadioButtonTrue.setChecked(false);
-        RadioButton questionThreeRadioButtonFalse = findViewById(R.id.question_three_radio_button_false);
-        questionThreeRadioButtonFalse.setChecked(false);
+        RadioGroup questionThreeRadioGroup = (RadioGroup) findViewById(R.id.question_three_radio_group);
+        questionThreeRadioGroup.clearCheck();
 
         // Question 4
-        RadioButton questionFourRadioButtonA = (RadioButton) findViewById(R.id.question_four_radio_button_a);
-        questionFourRadioButtonA.setChecked(false);
-        RadioButton questionFourRadioButtonB = (RadioButton) findViewById(R.id.question_four_radio_button_b);
-        questionFourRadioButtonB.setChecked(false);
-        RadioButton questionFourRadioButtonC = (RadioButton) findViewById(R.id.question_four_radio_button_c);
-        questionFourRadioButtonC.setChecked(false);
-        RadioButton questionFourRadioButtonD = (RadioButton) findViewById(R.id.question_four_radio_button_d);
-        questionFourRadioButtonD.setChecked(false);
+        RadioGroup questionFourRadioGroup = (RadioGroup) findViewById(R.id.question_four_radio_group);
+        questionFourRadioGroup.clearCheck();
 
         // Question 5
-        RadioButton questionFiveRadioButtonA = (RadioButton) findViewById(R.id.question_five_radio_button_a);
-        questionFiveRadioButtonA.setChecked(false);
-        RadioButton questionFiveRadioButtonB = (RadioButton) findViewById(R.id.question_five_radio_button_b);
-        questionFiveRadioButtonB.setChecked(false);
-        RadioButton questionFiveRadioButtonC = (RadioButton) findViewById(R.id.question_five_radio_button_c);
-        questionFiveRadioButtonC.setChecked(false);
-        RadioButton questionFiveRadioButtonD = (RadioButton) findViewById(R.id.question_five_radio_button_d);
-        questionFiveRadioButtonD.setChecked(false);
+        RadioGroup questionFiveRadioGroup = (RadioGroup) findViewById(R.id.question_five_radio_group);
+        questionFiveRadioGroup.clearCheck();
 
         // Question 6
         CheckBox questionSixCheckboxA = (CheckBox) findViewById(R.id.question_six_checkbox_a);
@@ -687,24 +668,12 @@ public class MainActivity extends AppCompatActivity {
         questionSixCheckboxD.setChecked(false);
 
         // Question 7
-        RadioButton questionSevenRadioButtonA = (RadioButton) findViewById(R.id.question_seven_radio_button_a);
-        questionSevenRadioButtonA.setChecked(false);
-        RadioButton questionSevenRadioButtonB = (RadioButton) findViewById(R.id.question_seven_radio_button_b);
-        questionSevenRadioButtonB.setChecked(false);
-        RadioButton questionSevenRadioButtonC = (RadioButton) findViewById(R.id.question_seven_radio_button_c);
-        questionSevenRadioButtonC.setChecked(false);
-        RadioButton questionSevenRadioButtonD = (RadioButton) findViewById(R.id.question_seven_radio_button_d);
-        questionSevenRadioButtonD.setChecked(false);
+        RadioGroup questionSevenRadioGroup = (RadioGroup) findViewById(R.id.question_seven_radio_group);
+        questionSevenRadioGroup.clearCheck();
 
         // Question 8
-        RadioButton questionEightRadioButtonA = (RadioButton) findViewById(R.id.question_eight_radio_button_a);
-        questionEightRadioButtonA.setChecked(false);
-        RadioButton questionEightRadioButtonB = (RadioButton) findViewById(R.id.question_eight_radio_button_b);
-        questionEightRadioButtonB.setChecked(false);
-        RadioButton questionEightRadioButtonC = (RadioButton) findViewById(R.id.question_eight_radio_button_c);
-        questionEightRadioButtonC.setChecked(false);
-        RadioButton questionEightRadioButtonD = (RadioButton) findViewById(R.id.question_eight_radio_button_d);
-        questionEightRadioButtonD.setChecked(false);
+        RadioGroup questionEightRadioGroup = (RadioGroup) findViewById(R.id.question_eight_radio_group);
+        questionEightRadioGroup.clearCheck();
 
         noOfQuestionsAnswered = 0;
         questionOneAnswered = 0;

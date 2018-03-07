@@ -93,6 +93,7 @@
                         android:textSize="18sp" />
 
                     <RadioGroup
+                        android:id="@+id/question_one_radio_group"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
@@ -208,6 +209,7 @@
                         android:textSize="18sp" />
 
                     <RadioGroup
+                        android:id="@+id/question_three_radio_group"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
@@ -265,6 +267,7 @@
                         android:textSize="18sp" />
 
                     <RadioGroup
+                        android:id="@+id/question_four_radio_group"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
@@ -344,6 +347,7 @@
                         android:textSize="18sp" />
 
                     <RadioGroup
+                        android:id="@+id/question_five_radio_group"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
@@ -505,6 +509,7 @@
                         android:textSize="18sp" />
 
                     <RadioGroup
+                        android:id="@+id/question_seven_radio_group"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
@@ -584,6 +589,7 @@
                         android:textSize="18sp" />
 
                     <RadioGroup
+                        android:id="@+id/question_eight_radio_group"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
