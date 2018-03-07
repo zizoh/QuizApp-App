@@ -1,13 +1,9 @@
 package com.example.android.quizapp;
 
-import android.app.Dialog;
-import android.app.DialogFragment;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.widget.NestedScrollView;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
@@ -119,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
             // Sets focus on userNameEdittext and show the keyboard
             userNameEdittext.requestFocus();
 
-            // Brings window focus to top of scrollView
+            // Brings window focus to top of scrollView, so that user can enter name
             scrollView = (NestedScrollView) findViewById(R.id.scrollView);
             scrollView.smoothScrollTo(0, view.getTop());
 
@@ -687,8 +683,6 @@ public class MainActivity extends AppCompatActivity {
         questionEightAnswered = 0;
         checkProgressBar(view);
 
-        DialogFragment newFragment = new ResetQuizDialogFragment();
-        newFragment.show(getFragmentManager(), "resetQuiz");
     }
 
     // This method implements the progress bar
@@ -719,22 +713,4 @@ public class MainActivity extends AppCompatActivity {
         // Call to superclass so it can save the view hierarchy state
         super.onSaveInstanceState(savedInstanceState);
     }
-
-    public static class ResetQuizDialogFragment extends DialogFragment {
-        @Override
-        public Dialog onCreateDialog(Bundle savedInstanceState) {
-            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-            builder.setMessage(R.string.dialogMessage);
-
-            builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int id) {
-                    // User clicked OK button
-                }
-            });
-
-            // Create the AlertDialog
-            return builder.create();
-        }
-    }
-
 }

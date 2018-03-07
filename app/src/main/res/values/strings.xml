@@ -64,8 +64,5 @@
 
     <!-- Retake Quiz Button -->
     <string name="resetButton">Reset</string>
-    <string name="dialogMessage">To repeat the same answer for a question,
-        you need to first choose a different button</string>
-    <string name="ok">OK</string>
 
 </resources>
