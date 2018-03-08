@@ -3,7 +3,6 @@ package com.example.android.quizapp;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
@@ -16,6 +15,7 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.ScrollView;
 import android.widget.Toast;
 
 import static android.text.TextUtils.isEmpty;
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
     EditText questionTwoAnswerEdittext;
 
     ProgressBar progressBar;
-    NestedScrollView scrollView;
+    ScrollView scrollView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,6 +102,15 @@ public class MainActivity extends AppCompatActivity {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
             }
         });
+
+        /*RadioGroup questionOneRadioGroup = (RadioGroup) findViewById(R.id.question_one_radio_group);
+        questionOneRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            public void onCheckedChanged(RadioGroup group, int checkedId)
+            {
+                noOfQuestionsAnswered++;
+                checkProgressBar(view);
+            }
+        });*/
     }
 
     // This method is called when the Submit Answers button is clicked.
@@ -116,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
             userNameEdittext.requestFocus();
 
             // Brings window focus to top of scrollView, so that user can enter name
-            scrollView = (NestedScrollView) findViewById(R.id.scrollView);
+            scrollView = (ScrollView) findViewById(R.id.scrollView);
             scrollView.smoothScrollTo(0, view.getTop());
 
             // Show softInputKeyboard and show Toast
@@ -630,7 +639,7 @@ public class MainActivity extends AppCompatActivity {
     public void resetQuiz(View view) {
 
         // Brings window focus to top of scrollView so user can retake quiz
-        scrollView = (NestedScrollView) findViewById(R.id.scrollView);
+        scrollView = (ScrollView) findViewById(R.id.scrollView);
         scrollView.smoothScrollTo(0, view.getTop());
 
         // Question 1
