@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Initialize ProgressBar
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
-        checkProgressBar(progressBar);
+        checkProgressBar();
 
         //This method handles when the user answers Question 2
         questionTwoAnswerEdittext = (EditText) findViewById(R.id.question_two_answer_edittext);
@@ -88,11 +88,11 @@ public class MainActivity extends AppCompatActivity {
                 } else if (questionTwoAnswer.length() == 1 && questionTwoAnswered == 0) {
                     questionTwoAnswered = 1;
                     noOfQuestionsAnswered++;
-                    checkProgressBar(progressBar);
+                    checkProgressBar();
                 } else if (isEmpty(questionTwoAnswer) && questionTwoAnswered == 1) {
                     questionTwoAnswered = 0;
                     noOfQuestionsAnswered--;
-                    checkProgressBar(progressBar);
+                    checkProgressBar();
                 }
             }
 
@@ -108,14 +108,13 @@ public class MainActivity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId)
             {
                 noOfQuestionsAnswered++;
-                checkProgressBar(view);
+                checkProgressBar();
             }
         });*/
     }
 
     // This method is called when the Submit Answers button is clicked.
     public void submitAnswers(View view) {
-
         int finalMarks = markQuestions();
         EditText userNameEdittext = (EditText) findViewById(R.id.username);
 
@@ -153,7 +152,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     if (checkedQuestionOne) {
                         noOfQuestionsAnswered++;
-                        checkProgressBar(view);
+                        checkProgressBar();
                         questionOneAnswered = 1;
                     }
                 }
@@ -163,7 +162,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     if (checkedQuestionOne) {
                         noOfQuestionsAnswered++;
-                        checkProgressBar(view);
+                        checkProgressBar();
                         questionOneAnswered = 1;
                     }
                 }
@@ -173,7 +172,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     if (checkedQuestionOne) {
                         noOfQuestionsAnswered++;
-                        checkProgressBar(view);
+                        checkProgressBar();
                         questionOneAnswered = 1;
                     }
                 }
@@ -183,7 +182,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     if (checkedQuestionOne) {
                         noOfQuestionsAnswered++;
-                        checkProgressBar(view);
+                        checkProgressBar();
                         questionOneAnswered = 1;
                     }
                 }
@@ -202,7 +201,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     if (checkedQuestionThree) {
                         noOfQuestionsAnswered++;
-                        checkProgressBar(view);
+                        checkProgressBar();
                         questionThreeAnswered = 1;
                     }
                 }
@@ -212,7 +211,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     if (checkedQuestionThree) {
                         noOfQuestionsAnswered++;
-                        checkProgressBar(view);
+                        checkProgressBar();
                         questionThreeAnswered = 1;
                     }
                 }
@@ -231,7 +230,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     if (checkedQuestionFour) {
                         noOfQuestionsAnswered++;
-                        checkProgressBar(view);
+                        checkProgressBar();
                         questionFourAnswered = 1;
                     }
                 }
@@ -241,7 +240,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     if (checkedQuestionFour) {
                         noOfQuestionsAnswered++;
-                        checkProgressBar(view);
+                        checkProgressBar();
                         questionFourAnswered = 1;
                     }
                 }
@@ -251,7 +250,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     if (checkedQuestionFour) {
                         noOfQuestionsAnswered++;
-                        checkProgressBar(view);
+                        checkProgressBar();
                         questionFourAnswered = 1;
                     }
                 }
@@ -261,7 +260,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     if (checkedQuestionFour) {
                         noOfQuestionsAnswered++;
-                        checkProgressBar(view);
+                        checkProgressBar();
                         questionFourAnswered = 1;
                     }
                 }
@@ -280,7 +279,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     if (checkedQuestionFive) {
                         noOfQuestionsAnswered++;
-                        checkProgressBar(view);
+                        checkProgressBar();
                         questionFiveAnswered = 1;
                     }
                 }
@@ -290,7 +289,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     if (checkedQuestionFive) {
                         noOfQuestionsAnswered++;
-                        checkProgressBar(view);
+                        checkProgressBar();
                         questionFiveAnswered = 1;
                     }
                 }
@@ -300,7 +299,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     if (checkedQuestionFive) {
                         noOfQuestionsAnswered++;
-                        checkProgressBar(view);
+                        checkProgressBar();
                         questionFiveAnswered = 1;
                     }
                 }
@@ -310,7 +309,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     if (checkedQuestionFive) {
                         noOfQuestionsAnswered++;
-                        checkProgressBar(view);
+                        checkProgressBar();
                         questionFiveAnswered = 1;
                     }
                 }
@@ -336,7 +335,7 @@ public class MainActivity extends AppCompatActivity {
                 else if (checkedQuestionSix && numberOfCheckboxesChecked == 0) {
                     numberOfCheckboxesChecked++;
                     noOfQuestionsAnswered++;
-                    checkProgressBar(view);
+                    checkProgressBar();
                     questionSixAnswered++;
                 }
                 // If at least 1 checkbox is checked
@@ -348,7 +347,7 @@ public class MainActivity extends AppCompatActivity {
                     if (numberOfCheckboxesChecked == 1) {
                         numberOfCheckboxesChecked--;
                         noOfQuestionsAnswered--;
-                        checkProgressBar(view);
+                        checkProgressBar();
                         questionSixAnswered--;
                     }
                     // If more than 1 checkboxes were checked and 1 is now unchecked
@@ -367,7 +366,7 @@ public class MainActivity extends AppCompatActivity {
                 else if (checkedQuestionSix && numberOfCheckboxesChecked == 0) {
                     numberOfCheckboxesChecked++;
                     noOfQuestionsAnswered++;
-                    checkProgressBar(view);
+                    checkProgressBar();
                     questionSixAnswered++;
                 }
                 // If at least 1 checkbox is checked
@@ -379,7 +378,7 @@ public class MainActivity extends AppCompatActivity {
                     if (numberOfCheckboxesChecked == 1) {
                         numberOfCheckboxesChecked--;
                         noOfQuestionsAnswered--;
-                        checkProgressBar(view);
+                        checkProgressBar();
                         questionSixAnswered--;
                     }
                     // If more than 1 checkboxes were checked and one is now unchecked
@@ -398,7 +397,7 @@ public class MainActivity extends AppCompatActivity {
                 else if (checkedQuestionSix && numberOfCheckboxesChecked == 0) {
                     numberOfCheckboxesChecked++;
                     noOfQuestionsAnswered++;
-                    checkProgressBar(view);
+                    checkProgressBar();
                     questionSixAnswered++;
                 }
                 // If at least 1 checkbox is checked
@@ -410,7 +409,7 @@ public class MainActivity extends AppCompatActivity {
                     if (numberOfCheckboxesChecked == 1) {
                         numberOfCheckboxesChecked--;
                         noOfQuestionsAnswered--;
-                        checkProgressBar(view);
+                        checkProgressBar();
                         questionSixAnswered--;
                     }
                     // If more than 1 checkboxes were checked and one is now unchecked
@@ -429,7 +428,7 @@ public class MainActivity extends AppCompatActivity {
                 else if (checkedQuestionSix && numberOfCheckboxesChecked == 0) {
                     numberOfCheckboxesChecked++;
                     noOfQuestionsAnswered++;
-                    checkProgressBar(view);
+                    checkProgressBar();
                     questionSixAnswered++;
                 }
                 // If at least 1 checkbox is checked
@@ -441,7 +440,7 @@ public class MainActivity extends AppCompatActivity {
                     if (numberOfCheckboxesChecked == 1) {
                         numberOfCheckboxesChecked--;
                         noOfQuestionsAnswered--;
-                        checkProgressBar(view);
+                        checkProgressBar();
                         questionSixAnswered--;
                     }
                     // If more than 1 checkboxes were checked and one is now unchecked
@@ -464,7 +463,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     if (checkedQuestionSeven) {  // Layout
                         noOfQuestionsAnswered++;
-                        checkProgressBar(view);
+                        checkProgressBar();
                         questionSevenAnswered = 1;
                     }
                 }
@@ -474,7 +473,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     if (checkedQuestionSeven) {  // Styles
                         noOfQuestionsAnswered++;
-                        checkProgressBar(view);
+                        checkProgressBar();
                         questionSevenAnswered = 1;
                     }
                 }
@@ -484,7 +483,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     if (checkedQuestionSeven) {  // Drawable
                         noOfQuestionsAnswered++;
-                        checkProgressBar(view);
+                        checkProgressBar();
                         questionSevenAnswered = 1;
                     }
                 }
@@ -494,7 +493,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     if (checkedQuestionSeven) {  // Manifest
                         noOfQuestionsAnswered++;
-                        checkProgressBar(view);
+                        checkProgressBar();
                         questionSevenAnswered = 1;
                     }
                 }
@@ -513,7 +512,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     if (checkedQuestionEight) {  // Debug
                         noOfQuestionsAnswered++;
-                        checkProgressBar(view);
+                        checkProgressBar();
                         questionEightAnswered = 1;
                     }
                 }
@@ -523,7 +522,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     if (checkedQuestionEight) {  // Run
                         noOfQuestionsAnswered++;
-                        checkProgressBar(view);
+                        checkProgressBar();
                         questionEightAnswered = 1;
                     }
                 }
@@ -533,7 +532,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     if (checkedQuestionEight) {  // Refactor
                         noOfQuestionsAnswered++;
-                        checkProgressBar(view);
+                        checkProgressBar();
                         questionEightAnswered = 1;
                     }
                 }
@@ -543,7 +542,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     if (checkedQuestionEight) {  // Gradle
                         noOfQuestionsAnswered++;
-                        checkProgressBar(view);
+                        checkProgressBar();
                         questionEightAnswered = 1;
                     }
                 }
@@ -690,12 +689,12 @@ public class MainActivity extends AppCompatActivity {
         numberOfCheckboxesChecked = 0;
         questionSevenAnswered = 0;
         questionEightAnswered = 0;
-        checkProgressBar(view);
+        checkProgressBar();
 
     }
 
     // This method implements the progress bar
-    public void checkProgressBar(View view) {
+    public void checkProgressBar() {
         progressBar.setIndeterminate(false);
         progressBar.setMax(totalNumberOfQuestions);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
