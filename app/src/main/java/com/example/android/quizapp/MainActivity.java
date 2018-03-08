@@ -20,7 +20,6 @@ import android.widget.Toast;
 
 import static android.text.TextUtils.isEmpty;
 
-
 public class MainActivity extends AppCompatActivity {
 
     // Keys to identify the data saved
@@ -48,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
     int questionSevenAnswered = 0;
     int questionEightAnswered = 0;
     EditText questionTwoAnswerEdittext;
-
     ProgressBar progressBar;
     ScrollView scrollView;
 
@@ -102,15 +100,6 @@ public class MainActivity extends AppCompatActivity {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
             }
         });
-
-        /*RadioGroup questionOneRadioGroup = (RadioGroup) findViewById(R.id.question_one_radio_group);
-        questionOneRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            public void onCheckedChanged(RadioGroup group, int checkedId)
-            {
-                noOfQuestionsAnswered++;
-                checkProgressBar();
-            }
-        });*/
     }
 
     // This method is called when the Submit Answers button is clicked.
@@ -141,183 +130,43 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    // This method handles the click event for Question 1 radio buttons
+    // This method handles the click event for Question 1 radio buttons to update progress bar
     public void onQuestionOneRadioButtonClicked(View view) {
-        // Is the button now checked?
-        boolean checkedQuestionOne = ((RadioButton) view).isChecked();
-        // Check which radio button was checked
-        switch (view.getId()) {
-            case R.id.question_one_radio_button_a:  // NaMeBeThis
-                if (checkedQuestionOne && questionOneAnswered == 1) {
-                } else {
-                    if (checkedQuestionOne) {
-                        noOfQuestionsAnswered++;
-                        checkProgressBar();
-                        questionOneAnswered = 1;
-                    }
-                }
-                break;
-            case R.id.question_one_radio_button_b: // NAmeBEthis
-                if (checkedQuestionOne && questionOneAnswered == 1) {
-                } else {
-                    if (checkedQuestionOne) {
-                        noOfQuestionsAnswered++;
-                        checkProgressBar();
-                        questionOneAnswered = 1;
-                    }
-                }
-                break;
-            case R.id.question_one_radio_button_c: // NAMEBETHIS
-                if (checkedQuestionOne && questionOneAnswered == 1) {
-                } else {
-                    if (checkedQuestionOne) {
-                        noOfQuestionsAnswered++;
-                        checkProgressBar();
-                        questionOneAnswered = 1;
-                    }
-                }
-                break;
-            case R.id.question_one_radio_button_d: // naMeBeThis
-                if (checkedQuestionOne && questionOneAnswered == 1) {
-                } else {
-                    if (checkedQuestionOne) {
-                        noOfQuestionsAnswered++;
-                        checkProgressBar();
-                        questionOneAnswered = 1;
-                    }
-                }
-                break;
+        if (questionOneAnswered == 0) {
+            noOfQuestionsAnswered++;
+            checkProgressBar();
+            questionOneAnswered = 1;
         }
     }
 
-    // This method handles the click event for Question 3 radio buttons
+    // This method handles the click event for Question 3 radio buttons to update progress bar
     public void onQuestionThreeRadioButtonClicked(View view) {
-        // Is the button now checked?
-        boolean checkedQuestionThree = ((RadioButton) view).isChecked();
-        // Check which radio button was checked
-        switch (view.getId()) {
-            case R.id.question_three_radio_button_true: // True
-                if (checkedQuestionThree && questionThreeAnswered == 1) {
-                } else {
-                    if (checkedQuestionThree) {
-                        noOfQuestionsAnswered++;
-                        checkProgressBar();
-                        questionThreeAnswered = 1;
-                    }
-                }
-                break;
-            case R.id.question_three_radio_button_false: // False
-                if (checkedQuestionThree && questionThreeAnswered == 1) {
-                } else {
-                    if (checkedQuestionThree) {
-                        noOfQuestionsAnswered++;
-                        checkProgressBar();
-                        questionThreeAnswered = 1;
-                    }
-                }
-                break;
+        if (questionThreeAnswered == 0) {
+            noOfQuestionsAnswered++;
+            checkProgressBar();
+            questionThreeAnswered = 1;
         }
     }
 
-    // This method handles the click event for Question 4 radio buttons
+    // This method handles the click event for Question 4 radio buttons to update progress bar
     public void onQuestionFourRadioButtonClicked(View view) {
-        // Is the button now checked?
-        boolean checkedQuestionFour = ((RadioButton) view).isChecked();
-        // Check which radio button was checked
-        switch (view.getId()) {
-            case R.id.question_four_radio_button_a: // Question mark (?)
-                if (checkedQuestionFour && questionFourAnswered == 1) {
-                } else {
-                    if (checkedQuestionFour) {
-                        noOfQuestionsAnswered++;
-                        checkProgressBar();
-                        questionFourAnswered = 1;
-                    }
-                }
-                break;
-            case R.id.question_four_radio_button_b: // Comma (,)
-                if (checkedQuestionFour && questionFourAnswered == 1) {
-                } else {
-                    if (checkedQuestionFour) {
-                        noOfQuestionsAnswered++;
-                        checkProgressBar();
-                        questionFourAnswered = 1;
-                    }
-                }
-                break;
-            case R.id.question_four_radio_button_c: // Semi colon (;)
-                if (checkedQuestionFour && questionFourAnswered == 1) {
-                } else {
-                    if (checkedQuestionFour) {
-                        noOfQuestionsAnswered++;
-                        checkProgressBar();
-                        questionFourAnswered = 1;
-                    }
-                }
-                break;
-            case R.id.question_four_radio_button_d: // Exclamation mark (!)
-                if (checkedQuestionFour && questionFourAnswered == 1) {
-                } else {
-                    if (checkedQuestionFour) {
-                        noOfQuestionsAnswered++;
-                        checkProgressBar();
-                        questionFourAnswered = 1;
-                    }
-                }
-                break;
+        if (questionFourAnswered == 0) {
+            noOfQuestionsAnswered++;
+            checkProgressBar();
+            questionFourAnswered = 1;
         }
     }
 
-    // This method handles the click event for Question 5 radio buttons
+    // This method handles the click event for Question 5 radio buttons to update progress bar
     public void onQuestionFiveRadioButtonClicked(View view) {
-        // Is the button now checked?
-        boolean checkedQuestionFive = ((RadioButton) view).isChecked();
-        // Check which radio button was checked
-        switch (view.getId()) {
-            case R.id.question_five_radio_button_a: // sp
-                if (checkedQuestionFive && questionFiveAnswered == 1) {
-                } else {
-                    if (checkedQuestionFive) {
-                        noOfQuestionsAnswered++;
-                        checkProgressBar();
-                        questionFiveAnswered = 1;
-                    }
-                }
-                break;
-            case R.id.question_five_radio_button_b: // tz
-                if (checkedQuestionFive && questionFiveAnswered == 1) {
-                } else {
-                    if (checkedQuestionFive) {
-                        noOfQuestionsAnswered++;
-                        checkProgressBar();
-                        questionFiveAnswered = 1;
-                    }
-                }
-                break;
-            case R.id.question_five_radio_button_c: // jz
-                if (checkedQuestionFive && questionFiveAnswered == 1) {
-                } else {
-                    if (checkedQuestionFive) {
-                        noOfQuestionsAnswered++;
-                        checkProgressBar();
-                        questionFiveAnswered = 1;
-                    }
-                }
-                break;
-            case R.id.question_five_radio_button_d: // sz
-                if (checkedQuestionFive && questionFiveAnswered == 1) {
-                } else {
-                    if (checkedQuestionFive) {
-                        noOfQuestionsAnswered++;
-                        checkProgressBar();
-                        questionFiveAnswered = 1;
-                    }
-                }
-                break;
+        if (questionFiveAnswered == 0) {
+            noOfQuestionsAnswered++;
+            checkProgressBar();
+            questionFiveAnswered = 1;
         }
     }
 
-    // This method handles click events for Question 6 checkboxes
+    // This method handles click events for Question 6 checkboxes to update progress bar
     // It allows the user to check only 3 checkboxes at a time
     public void onQuestionSixCheckboxClicked(View view) {
         // Is the view now checked?
@@ -452,101 +301,21 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    // This method handles the click event for Question 7 radio buttons
+    // This method handles the click event for Question 7 radio buttons to update progress bar
     public void onQuestionSevenRadioButtonClicked(View view) {
-        // Is the button now checked?
-        boolean checkedQuestionSeven = ((RadioButton) view).isChecked();
-        // Check which radio button was clicked
-        switch (view.getId()) {
-            case R.id.question_seven_radio_button_a:
-                if (checkedQuestionSeven && questionSevenAnswered == 1) {
-                } else {
-                    if (checkedQuestionSeven) {  // Layout
-                        noOfQuestionsAnswered++;
-                        checkProgressBar();
-                        questionSevenAnswered = 1;
-                    }
-                }
-                break;
-            case R.id.question_seven_radio_button_b:
-                if (checkedQuestionSeven && questionSevenAnswered == 1) {
-                } else {
-                    if (checkedQuestionSeven) {  // Styles
-                        noOfQuestionsAnswered++;
-                        checkProgressBar();
-                        questionSevenAnswered = 1;
-                    }
-                }
-                break;
-            case R.id.question_seven_radio_button_c: // Correct answer
-                if (checkedQuestionSeven && questionSevenAnswered == 1) {
-                } else {
-                    if (checkedQuestionSeven) {  // Drawable
-                        noOfQuestionsAnswered++;
-                        checkProgressBar();
-                        questionSevenAnswered = 1;
-                    }
-                }
-                break;
-            case R.id.question_seven_radio_button_d:
-                if (checkedQuestionSeven && questionSevenAnswered == 1) {
-                } else {
-                    if (checkedQuestionSeven) {  // Manifest
-                        noOfQuestionsAnswered++;
-                        checkProgressBar();
-                        questionSevenAnswered = 1;
-                    }
-                }
-                break;
+        if (questionSevenAnswered == 0) {
+            noOfQuestionsAnswered++;
+            checkProgressBar();
+            questionSevenAnswered = 1;
         }
     }
 
-    // This method handles the click event for Question 8 radio buttons
+    // This method handles the click event for Question 8 radio buttons to update progress bar
     public void onQuestionEightRadioButtonClicked(View view) {
-        // Is the button now checked?
-        boolean checkedQuestionEight = ((RadioButton) view).isChecked();
-        // Check which radio button was clicked
-        switch (view.getId()) {
-            case R.id.question_eight_radio_button_a: // Correct answer
-                if (checkedQuestionEight && questionEightAnswered == 1) {
-                } else {
-                    if (checkedQuestionEight) {  // Debug
-                        noOfQuestionsAnswered++;
-                        checkProgressBar();
-                        questionEightAnswered = 1;
-                    }
-                }
-                break;
-            case R.id.question_eight_radio_button_b:
-                if (checkedQuestionEight && questionEightAnswered == 1) {
-                } else {
-                    if (checkedQuestionEight) {  // Run
-                        noOfQuestionsAnswered++;
-                        checkProgressBar();
-                        questionEightAnswered = 1;
-                    }
-                }
-                break;
-            case R.id.question_eight_radio_button_c:
-                if (checkedQuestionEight && questionEightAnswered == 1) {
-                } else {
-                    if (checkedQuestionEight) {  // Refactor
-                        noOfQuestionsAnswered++;
-                        checkProgressBar();
-                        questionEightAnswered = 1;
-                    }
-                }
-                break;
-            case R.id.question_eight_radio_button_d:
-                if (checkedQuestionEight && questionEightAnswered == 1) {
-                } else {
-                    if (checkedQuestionEight) {  // Gradle
-                        noOfQuestionsAnswered++;
-                        checkProgressBar();
-                        questionEightAnswered = 1;
-                    }
-                }
-                break;
+        if (questionEightAnswered == 0) {
+            noOfQuestionsAnswered++;
+            checkProgressBar();
+            questionEightAnswered = 1;
         }
     }
 
@@ -565,6 +334,7 @@ public class MainActivity extends AppCompatActivity {
         }
         // Question 2 correct answer RelativeLayout (1 mark)
         questionTwoAnswerEdittext = (EditText) findViewById(R.id.question_two_answer_edittext);
+        // Get the string the user entered
         String questionTwoAnswer = questionTwoAnswerEdittext.getText().toString().toUpperCase().replaceAll("\\s", "");
 
         if (questionTwoAnswer.equals("RELATIVELAYOUT")
