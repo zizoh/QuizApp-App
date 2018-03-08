@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     static final String STATE_NUMBEROFCHECKBOXESCHECKED = "numberOfCheckboxesChecked";
     static final String STATE_QUESTIONSEVENANSWERED = "questionSevenAnswered";
     static final String STATE_QUESTIONEIGHTANSWERED = "questionEightAnswered";
+    static final String STATE_NUMBEROFCORRECTQUESTIONSANSWERED = "noOfCorrectQuestionsAnswered";
 
     int totalNumberOfQuestions = 8;
     int totalMarks = 10;
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
     int numberOfCheckboxesChecked = 0;
     int questionSevenAnswered = 0;
     int questionEightAnswered = 0;
+    int noOfCorrectQuestionsAnswered = 0;
     EditText questionTwoAnswerEdittext;
     ProgressBar progressBar;
     ScrollView scrollView;
@@ -71,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
             numberOfCheckboxesChecked = savedInstanceState.getInt(STATE_NUMBEROFCHECKBOXESCHECKED);
             questionSevenAnswered = savedInstanceState.getInt(STATE_QUESTIONSEVENANSWERED);
             questionEightAnswered = savedInstanceState.getInt(STATE_NUMBEROFQUESTIONSANSWERED);
+            noOfCorrectQuestionsAnswered = savedInstanceState.getInt(STATE_NUMBEROFCORRECTQUESTIONSANSWERED);
         }
 
         // Initialize ProgressBar
@@ -321,10 +324,6 @@ public class MainActivity extends AppCompatActivity {
 
     // This method contains the marking scheme and assigns 1 point to every correct answer
     private int markQuestions() {
-
-        // Correct Answers to all questions
-        int noOfCorrectQuestionsAnswered = 0;
-
         // Question 1 correct answer D (1 mark)
         RadioButton questionOneRadioButtonD = (RadioButton) findViewById(R.id.question_one_radio_button_d);
         boolean answerQuestionOneRadioButtonD = questionOneRadioButtonD.isChecked();
@@ -459,6 +458,7 @@ public class MainActivity extends AppCompatActivity {
         numberOfCheckboxesChecked = 0;
         questionSevenAnswered = 0;
         questionEightAnswered = 0;
+        noOfCorrectQuestionsAnswered = 0;
         checkProgressBar();
 
     }
@@ -487,6 +487,7 @@ public class MainActivity extends AppCompatActivity {
         savedInstanceState.putInt(STATE_NUMBEROFCHECKBOXESCHECKED, numberOfCheckboxesChecked);
         savedInstanceState.putInt(STATE_QUESTIONSEVENANSWERED, questionSevenAnswered);
         savedInstanceState.putInt(STATE_QUESTIONEIGHTANSWERED, questionEightAnswered);
+        savedInstanceState.putInt(STATE_NUMBEROFCORRECTQUESTIONSANSWERED, noOfCorrectQuestionsAnswered);
 
         // Call to superclass so it can save the view hierarchy state
         super.onSaveInstanceState(savedInstanceState);
