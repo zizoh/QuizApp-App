@@ -3,10 +3,10 @@
 
     <!-- Username -->
     <string name="username_text">What is your name?</string>
-    <string name="username_hint">John</string>
+    <string name="username_hint">Aisha</string>
 
     <!--Question 1 -->
-    <string name="questionOneText">Select the option correctly written in camel case</string>
+    <string name="questionOneText">Select the option written in camel case</string>
     <string name="questionOneRadioButtonA">NaMeBeThis!</string>
     <string name="questionOneRadioButtonB">NAmeBEthis!</string>
     <string name="questionOneRadioButtonC">NAMEBETHIS!</string>
@@ -29,14 +29,14 @@
     <string name="questionFourRadioButtonD">Exclamation mark (!)</string>
 
     <!--Question 5 -->
-    <string name="questionFiveText">The correct unit for the xml attribute textSize is</string>
+    <string name="questionFiveText">The unit for the xml attribute, textSize, is</string>
     <string name="questionFiveRadioButtonA">sp</string>
     <string name="questionFiveRadioButtonB">tz</string>
     <string name="questionFiveRadioButtonC">jz</string>
     <string name="questionFiveRadioButtonD">sz</string>
 
     <!--Question 6 -->
-    <string name="questionSixText">When creating XMLs, after sketching the desired layout, you follow three steps. </string>
+    <string name="questionSixText">When creating XMLs, after sketching the desired layout, you do three things. </string>
     <string name="questionSixInstruction">Select the three that apply</string>
     <string name="questionSixCheckBoxA">Copy the views</string>
     <string name="questionSixCheckBoxB">Position the views</string>
@@ -45,7 +45,7 @@
     <string name="tooManyOptionsSelectedFloat">Uncheck one button first</string>
 
     <!--Question 7 -->
-    <string name="questionSevenText">You place photos to be used in your app into the ______ directory</string>
+    <string name="questionSevenText">Image resources are put into the ______ directory</string>
     <string name="questionSevenRadioButtonA">Layout</string>
     <string name="questionSevenRadioButtonB">Styles</string>
     <string name="questionSevenRadioButtonC">Drawable</string>

@@ -20,6 +20,7 @@ import android.widget.Toast;
 
 import static android.text.TextUtils.isEmpty;
 
+@SuppressWarnings("RedundantCast")
 public class MainActivity extends AppCompatActivity {
 
     // Keys to identify the data saved
@@ -83,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
         //This method handles when the user answers Question 2
         questionTwoAnswerEdittext = (EditText) findViewById(R.id.question_two_answer_edittext);
         questionTwoAnswerEdittext.addTextChangedListener(new TextWatcher() {
+            @SuppressWarnings("StatementWithEmptyBody")
             public void afterTextChanged(Editable s) {
                 CharSequence questionTwoAnswer = questionTwoAnswerEdittext.getText().toString();
                 if (isEmpty(questionTwoAnswer) && questionTwoAnswered == 0) {
@@ -120,16 +122,24 @@ public class MainActivity extends AppCompatActivity {
             scrollView.smoothScrollTo(0, view.getTop());
 
             // Show softInputKeyboard and show Toast
-            InputMethodManager imm = (InputMethodManager) MainActivity.this.getSystemService(Context.INPUT_METHOD_SERVICE);
-            imm.showSoftInput(userNameEdittext, InputMethodManager.SHOW_IMPLICIT);
-            Toast.makeText(this, R.string.emptyUsernameToast, Toast.LENGTH_LONG).show();
+            InputMethodManager imm = (InputMethodManager)
+                    MainActivity.this.getSystemService(Context.INPUT_METHOD_SERVICE);
+            if (imm != null) {
+                imm.showSoftInput(userNameEdittext, InputMethodManager.SHOW_IMPLICIT);
+                Toast.makeText(this, R.string.emptyUsernameToast, Toast.LENGTH_SHORT).show();
+            }
+
         } else {
             // Keep window focus at submit button, hide softInputKeyboard and show Toast
             Button submitButton = (Button) findViewById(R.id.submit_answers_button);
             submitButton.requestFocusFromTouch();
-            InputMethodManager imm = (InputMethodManager) MainActivity.this.getSystemService(Context.INPUT_METHOD_SERVICE);
-            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
-            Toast.makeText(this, "Hey " + userNameEdittext.getText() + ", you scored " + finalMarks + "/" + totalMarks + "!", Toast.LENGTH_LONG).show();
+            InputMethodManager imm = (InputMethodManager)
+                    MainActivity.this.getSystemService(Context.INPUT_METHOD_SERVICE);
+            if (imm != null) {
+                imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+                Toast.makeText(this, userNameEdittext.getText()
+                        + ", you scored " + finalMarks + "/" + totalMarks + "!", Toast.LENGTH_LONG).show();
+            }
         }
     }
 
@@ -405,48 +415,66 @@ public class MainActivity extends AppCompatActivity {
 
     // This method is called when the Reset button is clicked
     public void resetQuiz(View view) {
-
         // Brings window focus to top of scrollView so user can retake quiz
         scrollView = (ScrollView) findViewById(R.id.scrollView);
         scrollView.smoothScrollTo(0, view.getTop());
 
         // Question 1
         RadioGroup questionOneRadioGroup = (RadioGroup) findViewById(R.id.question_one_radio_group);
-        questionOneRadioGroup.clearCheck();
+        if (questionOneRadioGroup != null) {
+            questionOneRadioGroup.clearCheck();
+        }
 
         // Question 2
-        questionTwoAnswerEdittext = (EditText) findViewById(R.id.question_two_answer_edittext);
         questionTwoAnswerEdittext.setText("");
 
         // Question 3
         RadioGroup questionThreeRadioGroup = (RadioGroup) findViewById(R.id.question_three_radio_group);
-        questionThreeRadioGroup.clearCheck();
+        if (questionThreeRadioGroup != null) {
+            questionThreeRadioGroup.clearCheck();
+        }
 
         // Question 4
         RadioGroup questionFourRadioGroup = (RadioGroup) findViewById(R.id.question_four_radio_group);
-        questionFourRadioGroup.clearCheck();
+        if (questionFourRadioGroup != null) {
+            questionFourRadioGroup.clearCheck();
+        }
 
         // Question 5
         RadioGroup questionFiveRadioGroup = (RadioGroup) findViewById(R.id.question_five_radio_group);
-        questionFiveRadioGroup.clearCheck();
+        if (questionFiveRadioGroup != null) {
+            questionFiveRadioGroup.clearCheck();
+        }
 
         // Question 6
         CheckBox questionSixCheckboxA = (CheckBox) findViewById(R.id.question_six_checkbox_a);
-        questionSixCheckboxA.setChecked(false);
+        if (questionSixCheckboxA != null) {
+            questionSixCheckboxA.setChecked(false);
+        }
         CheckBox questionSixCheckboxB = (CheckBox) findViewById(R.id.question_six_checkbox_b);
-        questionSixCheckboxB.setChecked(false);
+        if (questionSixCheckboxB != null) {
+            questionSixCheckboxB.setChecked(false);
+        }
         CheckBox questionSixCheckboxC = (CheckBox) findViewById(R.id.question_six_checkbox_c);
-        questionSixCheckboxC.setChecked(false);
+        if (questionSixCheckboxC != null) {
+            questionSixCheckboxC.setChecked(false);
+        }
         CheckBox questionSixCheckboxD = (CheckBox) findViewById(R.id.question_six_checkbox_d);
-        questionSixCheckboxD.setChecked(false);
+        if (questionSixCheckboxD != null) {
+            questionSixCheckboxD.setChecked(false);
+        }
 
         // Question 7
         RadioGroup questionSevenRadioGroup = (RadioGroup) findViewById(R.id.question_seven_radio_group);
-        questionSevenRadioGroup.clearCheck();
+        if (questionSevenRadioGroup != null) {
+            questionSevenRadioGroup.clearCheck();
+        }
 
         // Question 8
         RadioGroup questionEightRadioGroup = (RadioGroup) findViewById(R.id.question_eight_radio_group);
-        questionEightRadioGroup.clearCheck();
+        if (questionEightRadioGroup != null) {
+            questionEightRadioGroup.clearCheck();
+        }
 
         noOfQuestionsAnswered = 0;
         questionOneAnswered = 0;
@@ -460,7 +488,6 @@ public class MainActivity extends AppCompatActivity {
         questionEightAnswered = 0;
         noOfCorrectQuestionsAnswered = 0;
         checkProgressBar();
-
     }
 
     // This method implements the progress bar

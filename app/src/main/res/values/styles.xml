@@ -1,6 +1,6 @@
 <resources>
 
-    <!-- Quiz app theme. -->
+    <!-- Quiz app theme -->
     <style name="QuizAppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -15,7 +15,7 @@
         <item name="android:colorButtonNormal">@color/submitButton</item>
     </style>
 
-    <!-- Try Again button style -->
+    <!-- Reset button style -->
     <style name="QuizAppTheme.ResetButton" parent="Widget.AppCompat.Button.Colored">
         <item name="android:colorButtonNormal">@color/resetButton</item>
     </style>
