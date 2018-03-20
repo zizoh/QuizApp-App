@@ -25,12 +25,7 @@ App Features
 Screenshots
 -------------
 
-<img src="screenshots/1_Top.png" height="400" alt="Screenshot"/> 
-<img src="screenshots/2_Mid.png" height="400" alt="Screenshot"/> 
-<img src="screenshots/3_EnterUsernameFloat.png" height="400" alt="Screenshot"/> 
-<img src="screenshots/4_SubmitButtonClicked.png" height="400" alt="Screenshot"/> 
-<img src="screenshots/5_Landscape.png" height="400" alt="Screenshot"/>
-<img src="screenshots/6_LandscapeWithFloat.png" height="400" alt="Screenshot"/>
+<img src="screenshots/1_Top.png" height="400" alt="Screenshot"/> <img src="screenshots/2_Mid.png" height="400" alt="Screenshot"/> <img src="screenshots/3_EnterUsernameFloat.png" height="400" alt="Screenshot"/> <img src="screenshots/4_SubmitButtonClicked.png" height="400" alt="Screenshot"/> <img src="screenshots/5_Landscape.png" height="400" alt="Screenshot"/> <img src="screenshots/6_LandscapeWithFloat.png" height="400" alt="Screenshot"/>
 
 Getting Started
 ---------------
