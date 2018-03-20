@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         checkProgressBar();
 
-        //This method handles when the user answers Question 2
+        // Set TextWatcher to handle text input for Question 2 answer
         questionTwoAnswerEdittext = (EditText) findViewById(R.id.question_two_answer_edittext);
         questionTwoAnswerEdittext.addTextChangedListener(new TextWatcher() {
             @SuppressWarnings("StatementWithEmptyBody")
@@ -141,6 +141,7 @@ public class MainActivity extends AppCompatActivity {
                         + ", you scored " + finalMarks + "/" + totalMarks + "!", Toast.LENGTH_LONG).show();
             }
         }
+        noOfCorrectQuestionsAnswered = 0;
     }
 
     // This method handles the click event for Question 1 radio buttons to update progress bar
@@ -149,6 +150,7 @@ public class MainActivity extends AppCompatActivity {
             noOfQuestionsAnswered++;
             checkProgressBar();
             questionOneAnswered = 1;
+        } else {
         }
     }
 
@@ -158,6 +160,7 @@ public class MainActivity extends AppCompatActivity {
             noOfQuestionsAnswered++;
             checkProgressBar();
             questionThreeAnswered = 1;
+        } else {
         }
     }
 
@@ -167,6 +170,7 @@ public class MainActivity extends AppCompatActivity {
             noOfQuestionsAnswered++;
             checkProgressBar();
             questionFourAnswered = 1;
+        } else {
         }
     }
 
@@ -176,6 +180,7 @@ public class MainActivity extends AppCompatActivity {
             noOfQuestionsAnswered++;
             checkProgressBar();
             questionFiveAnswered = 1;
+        } else {
         }
     }
 
@@ -320,6 +325,7 @@ public class MainActivity extends AppCompatActivity {
             noOfQuestionsAnswered++;
             checkProgressBar();
             questionSevenAnswered = 1;
+        } else {
         }
     }
 
@@ -329,6 +335,7 @@ public class MainActivity extends AppCompatActivity {
             noOfQuestionsAnswered++;
             checkProgressBar();
             questionEightAnswered = 1;
+        } else {
         }
     }
 
@@ -344,7 +351,8 @@ public class MainActivity extends AppCompatActivity {
         // Question 2 correct answer RelativeLayout (1 mark)
         questionTwoAnswerEdittext = (EditText) findViewById(R.id.question_two_answer_edittext);
         // Get the string the user entered
-        String questionTwoAnswer = questionTwoAnswerEdittext.getText().toString().toUpperCase().replaceAll("\\s", "");
+        String questionTwoAnswer = questionTwoAnswerEdittext.getText().
+                toString().toUpperCase().replaceAll("\\s", "");
 
         if (questionTwoAnswer.equals("RELATIVELAYOUT")
                 || questionTwoAnswer.equals("RELATIVELAYOUT.")) {

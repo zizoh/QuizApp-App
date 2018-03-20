@@ -1,7 +1,8 @@
 Quiz App
 ===================================
 
-This app lets the user answer beginner level questions on Android app development(java). It is the final project of the Udacity course Andela Learning Community - Beginner Android Development (ALC 2.0).
+This app lets the user answer beginner level questions on Android app development(Java). 
+It is the final project on the @Udacity, @googleafrica and @Andela course Andela Learning Community - Beginner Android Development (ALC 2.0).
 
 Pre-requisites
 --------------
@@ -10,6 +11,26 @@ Pre-requisites
 - Android Build Tools v26.0.2
 - Android Support Repository v26.1.0
 - Gradle 3.0.1
+
+App Features
+-------------
+
+- ToolBar
+- ProgressBar
+- TextWatcher
+- RadioGroup
+- Layout resources for different screen sizes and orientation
+
+
+Screenshots
+-------------
+
+<img src="screenshots/1_Top.png" height="400" alt="Screenshot"/> 
+<img src="screenshots/2_Mid.png" height="400" alt="Screenshot"/> 
+<img src="screenshots/3_EnterUsernameFloat.png" height="400" alt="Screenshot"/> 
+<img src="screenshots/4_SubmitButtonClicked.png" height="400" alt="Screenshot"/> 
+<img src="screenshots/5_Landscape.png" height="400" alt="Screenshot"/>
+<img src="screenshots/6_LandscapeWithFloat.png" height="400" alt="Screenshot"/>
 
 Getting Started
 ---------------

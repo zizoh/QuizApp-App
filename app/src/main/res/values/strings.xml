@@ -36,13 +36,13 @@
     <string name="questionFiveRadioButtonD">sz</string>
 
     <!--Question 6 -->
-    <string name="questionSixText">When creating XMLs, after sketching the desired layout, you do three things. </string>
+    <string name="questionSixText">When creating XMLs, after sketching the desired layout, you do three things</string>
     <string name="questionSixInstruction">Select the three that apply</string>
     <string name="questionSixCheckBoxA">Copy the views</string>
     <string name="questionSixCheckBoxB">Position the views</string>
     <string name="questionSixCheckboxC">Style the views</string>
     <string name="questionSixCheckBoxD">Select the views</string>
-    <string name="tooManyOptionsSelectedFloat">Uncheck one button first</string>
+    <string name="tooManyOptionsSelectedFloat">UNCHECK ONE BUTTON FIRST</string>
 
     <!--Question 7 -->
     <string name="questionSevenText">Image resources are put into the ______ directory</string>
